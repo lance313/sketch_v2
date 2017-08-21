@@ -1,0 +1,25 @@
+<%= form_with(model: piece, local: true) do |form| %>
+  <% if piece.errors.any? %>
+    <div id="error_explanation">
+      <h2>You forgot something!</h2>
+    </div>
+  <% else %>
+    <div id="error_explanation">
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title, "Name: " %>
+    <%= form.text_field :title, id: :piece_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :url, "URL: " %>
+    <%= form.text_field :url, id: :piece_url %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Create" %>
+  </div>
+
+<% end %>

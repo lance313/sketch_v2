@@ -1,0 +1,55 @@
+<style>
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#error_explanation  {
+
+  margin-bottom: 1em;
+}
+
+.navbar.navbar-toggleable-md.navbar-light {
+  width: 100%;
+}
+
+.header {
+  padding-top: 1em;
+}
+
+.actions {
+  text-align: center;
+  padding-top: 0.5em;
+  padding-bottom: 1em;
+}
+
+h2, li {
+  color: red;
+}
+
+ul.navbar-nav{
+  margin-left: 550px;
+}
+
+input {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+</style>
+
+<div class="header">
+  <h1>New Piece</h1>
+</div>
+
+<div class="whole">
+  <%= render 'form', piece: @piece %>
+</div>
+
+<div>
+  <button class="btn btn-secondary"><%= link_to 'Back', pieces_path%></button>
+</div>

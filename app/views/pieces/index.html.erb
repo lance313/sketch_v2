@@ -1,0 +1,28 @@
+<style>
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+.navbar-brand {
+  margin-right: 750px;
+}
+
+</style>
+
+<p id="notice"><%= notice %></p>
+
+
+<div class="container">
+  <div class="card-columns">
+    <% @pieces = @pieces.shuffle %>
+    <% @pieces.each do |piece| %>
+      <div class="card">
+        <%= link_to image_tag(piece.url, class: "card"), piece%>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<br>
+
+<a class="jump_up" href="#"><type="button" class="btn btn-secondary btn-lg btn-block">Top</button></a>

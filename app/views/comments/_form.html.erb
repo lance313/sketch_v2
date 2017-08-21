@@ -1,0 +1,27 @@
+<%= form_with(model: comment, local: true) do |form| %>
+  <% if comment.errors.any? %>
+    <div id="error_explanation">
+      <h2>Where's your comment?</h2>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :comment, style: "display:none;" %>
+    <%= form.text_area :comment, id: :comment_comment %>
+  </div>
+  <% id ||= false %>
+  <div class="field">
+    <% if id != false %>
+    <%= form.label :piece_id, style: "display:none;" %>
+
+      <%= form.text_field :piece_id, id: :comment_piece_id, value: id, style: "display:none;" %>
+    <% else %>
+      <%= form.label :piece_id, style: "display:none;" %>
+      <%= form.text_field :piece_id, id: :comment_piece_id, style: "display:none;" %>
+    <% end %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
