@@ -3,6 +3,8 @@ class CreatePieces < ActiveRecord::Migration[5.1]
     create_table :pieces do |t|
       t.string :title
       t.string :url
+      t.references :user, foreign_key: true
+
 
       t.timestamps
     end
