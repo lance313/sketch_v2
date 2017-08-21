@@ -1,0 +1,257 @@
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.6ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "pieces" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "comments" DISABLE TRIGGER ALL[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (1.6ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[36mFixture Insert (1.4ms)[0m  [1m[32mINSERT INTO "comments" ("comment", "created_at", "updated_at", "id", "piece_id") VALUES ('MyText', '2017-08-21 22:44:32.460167', '2017-08-21 22:44:32.460167', 980190962, 980190962)[0m
+  [1m[36mFixture Insert (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("comment", "created_at", "updated_at", "id", "piece_id") VALUES ('MyText', '2017-08-21 22:44:32.460167', '2017-08-21 22:44:32.460167', 298486374, 298486374)[0m
+  [1m[35m (2.5ms)[0m  [1m[34mselect MAX("id") from "comments"[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "pieces"[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "pieces" ("title", "url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2017-08-21 22:44:32.482863', '2017-08-21 22:44:32.482863', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "pieces" ("title", "url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2017-08-21 22:44:32.482863', '2017-08-21 22:44:32.482863', 298486374)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mselect MAX("id") from "pieces"[0m
+  [1m[36mFixture Delete (0.4ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '$2a$10$V3vCma4Ee9Ihmy3cjg79HOmJy0.Yi914ucEM20l9F0zGiV.KN5flG', '2017-08-21 22:44:32.492334', '2017-08-21 22:44:32.492334', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '$2a$10$kLoPxgcnQwNiqSj.pYoI1.Kdlwtz7kWudB0xSQgr2BecaD3IArOjO', '2017-08-21 22:44:32.492334', '2017-08-21 22:44:32.492334', 298486374)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mselect MAX("id") from "users"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "pieces" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "comments" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------
+SessionsControllerTest: test_should_get_login,
+----------------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------------
+SessionsControllerTest: test_should_get_setting
+-----------------------------------------------
+Started GET "/sessions/setting" for 127.0.0.1 at 2017-08-21 18:44:32 -0400
+Processing by SessionsController#setting as HTML
+  Rendering sessions/setting.html.erb within layouts/application
+  Rendered sessions/setting.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 295ms (Views: 285.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+---------------------------------------------
+SessionsControllerTest: test_should_get_home,
+---------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------
+SessionsControllerTest: test_should_get_profile,
+------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+---------------------------------------
+UserControllerTest: test_should_get_new
+---------------------------------------
+Started GET "/user/new" for 127.0.0.1 at 2017-08-21 18:44:33 -0400
+Processing by UserController#new as HTML
+  Rendering user/new.html.erb within layouts/application
+  Rendered user/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 12ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------
+PiecesControllerTest: test_should_show_piece
+--------------------------------------------
+  [1m[36mPiece Load (0.3ms)[0m  [1m[34mSELECT  "pieces".* FROM "pieces" WHERE "pieces"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/pieces/980190962" for 127.0.0.1 at 2017-08-21 18:44:33 -0400
+Processing by PiecesController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mPiece Load (0.3ms)[0m  [1m[34mSELECT  "pieces".* FROM "pieces" WHERE "pieces"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering pieces/show.html.erb within layouts/application
+  Rendered pieces/show.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------------
+PiecesControllerTest: test_should_destroy_piece
+-----------------------------------------------
+  [1m[36mPiece Load (0.3ms)[0m  [1m[34mSELECT  "pieces".* FROM "pieces" WHERE "pieces"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (4.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "pieces"[0m
+Started DELETE "/pieces/980190962" for 127.0.0.1 at 2017-08-21 18:44:33 -0400
+Processing by PiecesController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mPiece Load (1.3ms)[0m  [1m[34mSELECT  "pieces".* FROM "pieces" WHERE "pieces"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (5.5ms)[0m  [1m[31mDELETE FROM "pieces" WHERE "pieces"."id" = $1[0m  [["id", 980190962]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 7.4ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------
+PiecesControllerTest: test_should_update_piece
+----------------------------------------------
+  [1m[36mPiece Load (0.3ms)[0m  [1m[34mSELECT  "pieces".* FROM "pieces" WHERE "pieces"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Started PATCH "/pieces/980190962" for 127.0.0.1 at 2017-08-21 18:44:33 -0400
+Processing by PiecesController#update as HTML
+  Parameters: {"piece"=>{"title"=>"MyString", "url"=>"MyString"}, "id"=>"980190962"}
+  [1m[36mPiece Load (0.3ms)[0m  [1m[34mSELECT  "pieces".* FROM "pieces" WHERE "pieces"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/pieces/980190962
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------
+PiecesControllerTest: test_should_get_new
+-----------------------------------------
+  [1m[36mPiece Load (0.2ms)[0m  [1m[34mSELECT  "pieces".* FROM "pieces" WHERE "pieces"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/pieces/new" for 127.0.0.1 at 2017-08-21 18:44:33 -0400
+Processing by PiecesController#new as HTML
+  Rendering pieces/new.html.erb within layouts/application
+  Rendered pieces/_form.html.erb (2.5ms)
+  Rendered pieces/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------
+PiecesControllerTest: test_should_get_edit
+------------------------------------------
+  [1m[36mPiece Load (0.1ms)[0m  [1m[34mSELECT  "pieces".* FROM "pieces" WHERE "pieces"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/pieces/980190962/edit" for 127.0.0.1 at 2017-08-21 18:44:33 -0400
+Processing by PiecesController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mPiece Load (0.2ms)[0m  [1m[34mSELECT  "pieces".* FROM "pieces" WHERE "pieces"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering pieces/edit.html.erb within layouts/application
+  Rendered pieces/_form.html.erb (0.7ms)
+  Rendered pieces/edit.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+-------------------------------------------
+PiecesControllerTest: test_should_get_index
+-------------------------------------------
+  [1m[36mPiece Load (0.2ms)[0m  [1m[34mSELECT  "pieces".* FROM "pieces" WHERE "pieces"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/pieces" for 127.0.0.1 at 2017-08-21 18:44:33 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  [1m[36mPiece Load (0.7ms)[0m  [1m[34mSELECT "pieces".* FROM "pieces"[0m
+  Rendered pieces/index.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.7ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------
+PiecesControllerTest: test_should_create_piece
+----------------------------------------------
+  [1m[36mPiece Load (0.3ms)[0m  [1m[34mSELECT  "pieces".* FROM "pieces" WHERE "pieces"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "pieces"[0m
+Started POST "/pieces" for 127.0.0.1 at 2017-08-21 18:44:33 -0400
+Processing by PiecesController#create as HTML
+  Parameters: {"piece"=>{"title"=>"MyString", "url"=>"MyString"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "pieces" ("title", "url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "MyString"], ["url", "MyString"], ["created_at", "2017-08-21 22:44:33.302938"], ["updated_at", "2017-08-21 22:44:33.302938"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/pieces/980190963
+Completed 302 Found in 4ms (ActiveRecord: 0.8ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pieces"[0m
+  [1m[36mPiece Load (0.2ms)[0m  [1m[34mSELECT  "pieces".* FROM "pieces" ORDER BY "pieces"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------
+CommentsControllerTest: test_should_get_edit
+--------------------------------------------
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/comments/980190962/edit" for 127.0.0.1 at 2017-08-21 18:44:33 -0400
+Processing by CommentsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering comments/edit.html.erb within layouts/application
+  Rendered comments/_form.html.erb (15.1ms)
+  Rendered comments/edit.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 22ms (Views: 19.7ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------------
+CommentsControllerTest: test_should_update_comment
+--------------------------------------------------
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Started PATCH "/comments/980190962" for 127.0.0.1 at 2017-08-21 18:44:33 -0400
+Processing by CommentsController#update as HTML
+  Parameters: {"comment"=>{"comment"=>"MyText", "piece_id"=>"980190962"}, "id"=>"980190962"}
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPiece Load (0.2ms)[0m  [1m[34mSELECT  "pieces".* FROM "pieces" WHERE "pieces"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/comments/980190962
+Completed 302 Found in 12ms (ActiveRecord: 0.7ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+-------------------------------------------
+CommentsControllerTest: test_should_get_new
+-------------------------------------------
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/comments/new" for 127.0.0.1 at 2017-08-21 18:44:33 -0400
+Processing by CommentsController#new as HTML
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/_form.html.erb (1.6ms)
+  Rendered comments/new.html.erb within layouts/application (3.8ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+---------------------------------------------
+CommentsControllerTest: test_should_get_index
+---------------------------------------------
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/comments" for 127.0.0.1 at 2017-08-21 18:44:33 -0400
+Processing by CommentsController#index as HTML
+  Rendering comments/index.html.erb within layouts/application
+  [1m[36mComment Load (4.3ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" ORDER BY "comments"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  [1m[36mPiece Load (0.2ms)[0m  [1m[34mSELECT  "pieces".* FROM "pieces" WHERE "pieces"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mPiece Load (0.2ms)[0m  [1m[34mSELECT  "pieces".* FROM "pieces" WHERE "pieces"."id" = $1 LIMIT $2[0m  [["id", 298486374], ["LIMIT", 1]]
+  Rendered comments/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 12ms (Views: 5.0ms | ActiveRecord: 4.7ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+---------------------------------------------------
+CommentsControllerTest: test_should_destroy_comment
+---------------------------------------------------
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments"[0m
+Started DELETE "/comments/980190962" for 127.0.0.1 at 2017-08-21 18:44:33 -0400
+Processing by CommentsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = $1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/comments
+Completed 302 Found in 6ms (ActiveRecord: 0.9ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------------
+CommentsControllerTest: test_should_create_comment
+--------------------------------------------------
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments"[0m
+Started POST "/comments" for 127.0.0.1 at 2017-08-21 18:44:33 -0400
+Processing by CommentsController#create as HTML
+  Parameters: {"comment"=>{"comment"=>"MyText", "piece_id"=>"980190962"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPiece Load (0.3ms)[0m  [1m[34mSELECT  "pieces".* FROM "pieces" WHERE "pieces"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "comments" ("comment", "piece_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["comment", "MyText"], ["piece_id", 980190962], ["created_at", "2017-08-21 22:44:33.399863"], ["updated_at", "2017-08-21 22:44:33.399863"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.compieces/#{@comment.piece_id}
+Completed 302 Found in 3ms (ActiveRecord: 0.9ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments"[0m
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" ORDER BY "comments"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------
+CommentsControllerTest: test_should_show_comment
+------------------------------------------------
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/comments/980190962" for 127.0.0.1 at 2017-08-21 18:44:33 -0400
+Processing by CommentsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering comments/show.html.erb within layouts/application
+  [1m[36mPiece Load (0.4ms)[0m  [1m[34mSELECT  "pieces".* FROM "pieces" WHERE "pieces"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendered comments/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 7ms (Views: 4.0ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m

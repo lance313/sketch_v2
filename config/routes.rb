@@ -1,4 +1,17 @@
 Rails.application.routes.draw do
+  get 'user/new'
+
+  get 'sessions/login'
+
+  get 'sessions/home'
+
+  get 'sessions/profile'
+
+  get 'sessions/setting'
+
+  get  '/signup',  to: 'user#new'
+
+
   resources :comments
 
   resources :pieces do
