@@ -1067,3 +1067,3243 @@ Processing by UserController#new as HTML
 Completed 200 OK in 210ms (Views: 202.3ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/signup" for 127.0.0.1 at 2017-08-21 19:05:19 -0400
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UserController#new as HTML
+  Rendering user/new.html.erb within layouts/application
+  Rendered user/new.html.erb within layouts/application (118.8ms)
+Completed 500 Internal Server Error in 158ms (ActiveRecord: 10.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `users_path' for #<#<Class:0x007faf154139f0>:0x007faf182439d8>
+Did you mean?  user_new_path):
+    1: <h1>Sign up</h1>
+    2: <%= form_for @user do |f| %>
+    3: <p>
+    4: <%= f.label :username %>
+    5: <%= f.text_field :username %>
+  
+app/views/user/new.html.erb:2:in `_app_views_user_new_html_erb___515416797412459261_70194979161600'
+Started GET "/signup" for 127.0.0.1 at 2017-08-21 19:07:49 -0400
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UserController#new as HTML
+  Rendering user/new.html.erb within layouts/application
+  Rendered user/new.html.erb within layouts/application (120.4ms)
+Completed 500 Internal Server Error in 153ms (ActiveRecord: 6.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `users_path' for #<#<Class:0x007fe8b5b58678>:0x007fe8b3ccee78>
+Did you mean?  user_new_path):
+    1: <h1>Sign up</h1>
+    2: <%= form_for @user do |f| %>
+    3: <p>
+    4: <%= f.label :username %>
+    5: <%= f.text_field :username %>
+  
+app/views/user/new.html.erb:2:in `_app_views_user_new_html_erb___4416108121568987774_70318728859080'
+Started POST "/__web_console/repl_sessions/97a912091ae2d8c46f2c60868db09409/trace" for 127.0.0.1 at 2017-08-21 19:08:34 -0400
+Started POST "/__web_console/repl_sessions/97a912091ae2d8c46f2c60868db09409/trace" for 127.0.0.1 at 2017-08-21 19:08:35 -0400
+Started GET "/signup" for 127.0.0.1 at 2017-08-21 19:18:21 -0400
+Processing by UserController#new as HTML
+  Rendering user/new.html.erb within layouts/application
+  Rendered user/new.html.erb within layouts/application (25.6ms)
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 11.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `username' for #<User:0x007fe8b42facc0>):
+    2: <%= form_for @user do |f| %>
+    3: <p>
+    4: <%= f.label :username %>
+    5: <%= f.text_field :username %>
+    6: </p>
+    7: <p>
+    8: <%= f.label :password %>
+  
+app/views/user/new.html.erb:5:in `block in _app_views_user_new_html_erb___4416108121568987774_70318744275040'
+app/views/user/new.html.erb:2:in `_app_views_user_new_html_erb___4416108121568987774_70318744275040'
+Started GET "/signup" for 127.0.0.1 at 2017-08-21 19:19:01 -0400
+Processing by UserController#new as HTML
+  Rendering user/new.html.erb within layouts/application
+  Rendered user/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 269ms (Views: 265.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pieces" for 127.0.0.1 at 2017-08-22 14:51:39 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  [1m[36mPiece Load (22.2ms)[0m  [1m[34mSELECT "pieces".* FROM "pieces"[0m
+  Rendered pieces/index.html.erb within layouts/application (130.6ms)
+Completed 500 Internal Server Error in 180ms (ActiveRecord: 53.5ms)
+
+
+  
+ActionView::Template::Error (The asset "MyString" is not present in the asset pipeline.):
+    17:     <% @pieces = @pieces.shuffle %>
+    18:     <% @pieces.each do |piece| %>
+    19:       <div class="card">
+    20:         <%= link_to image_tag(piece.url, class: "card"), piece%>
+    21:       </div>
+    22:     <% end %>
+    23:   </div>
+  
+app/views/pieces/index.html.erb:20:in `block in _app_views_pieces_index_html_erb___1667502043858524976_70318716735700'
+app/views/pieces/index.html.erb:18:in `each'
+app/views/pieces/index.html.erb:18:in `_app_views_pieces_index_html_erb___1667502043858524976_70318716735700'
+Started GET "/" for 127.0.0.1 at 2017-08-22 14:51:44 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  [1m[36mPiece Load (0.3ms)[0m  [1m[34mSELECT "pieces".* FROM "pieces"[0m
+  Rendered pieces/index.html.erb within layouts/application (5.3ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (The asset "MyString" is not present in the asset pipeline.):
+    17:     <% @pieces = @pieces.shuffle %>
+    18:     <% @pieces.each do |piece| %>
+    19:       <div class="card">
+    20:         <%= link_to image_tag(piece.url, class: "card"), piece%>
+    21:       </div>
+    22:     <% end %>
+    23:   </div>
+  
+app/views/pieces/index.html.erb:20:in `block in _app_views_pieces_index_html_erb___1667502043858524976_70318708629400'
+app/views/pieces/index.html.erb:18:in `each'
+app/views/pieces/index.html.erb:18:in `_app_views_pieces_index_html_erb___1667502043858524976_70318708629400'
+Started GET "/" for 127.0.0.1 at 2017-08-22 14:51:48 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  [1m[36mPiece Load (0.4ms)[0m  [1m[34mSELECT "pieces".* FROM "pieces"[0m
+  Rendered pieces/index.html.erb within layouts/application (8.1ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (The asset "MyString" is not present in the asset pipeline.):
+    17:     <% @pieces = @pieces.shuffle %>
+    18:     <% @pieces.each do |piece| %>
+    19:       <div class="card">
+    20:         <%= link_to image_tag(piece.url, class: "card"), piece%>
+    21:       </div>
+    22:     <% end %>
+    23:   </div>
+  
+app/views/pieces/index.html.erb:20:in `block in _app_views_pieces_index_html_erb___1667502043858524976_70318714302400'
+app/views/pieces/index.html.erb:18:in `each'
+app/views/pieces/index.html.erb:18:in `_app_views_pieces_index_html_erb___1667502043858524976_70318714302400'
+Started GET "/" for 127.0.0.1 at 2017-08-22 14:52:14 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  [1m[36mPiece Load (0.3ms)[0m  [1m[34mSELECT "pieces".* FROM "pieces"[0m
+  Rendered pieces/index.html.erb within layouts/application (4.5ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (The asset "MyString" is not present in the asset pipeline.):
+    17:     <% @pieces = @pieces.shuffle %>
+    18:     <% @pieces.each do |piece| %>
+    19:       <div class="card">
+    20:         <%= link_to image_tag(piece.url, class: "card"), piece%>
+    21:       </div>
+    22:     <% end %>
+    23:   </div>
+  
+app/views/pieces/index.html.erb:20:in `block in _app_views_pieces_index_html_erb___1667502043858524976_70318718641800'
+app/views/pieces/index.html.erb:18:in `each'
+app/views/pieces/index.html.erb:18:in `_app_views_pieces_index_html_erb___1667502043858524976_70318718641800'
+Started GET "/" for 127.0.0.1 at 2017-08-22 14:52:17 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  [1m[36mPiece Load (0.3ms)[0m  [1m[34mSELECT "pieces".* FROM "pieces"[0m
+  Rendered pieces/index.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (The asset "MyString" is not present in the asset pipeline.):
+    17:     <% @pieces = @pieces.shuffle %>
+    18:     <% @pieces.each do |piece| %>
+    19:       <div class="card">
+    20:         <%= link_to image_tag(piece.url, class: "card"), piece%>
+    21:       </div>
+    22:     <% end %>
+    23:   </div>
+  
+app/views/pieces/index.html.erb:20:in `block in _app_views_pieces_index_html_erb___1667502043858524976_70318746532960'
+app/views/pieces/index.html.erb:18:in `each'
+app/views/pieces/index.html.erb:18:in `_app_views_pieces_index_html_erb___1667502043858524976_70318746532960'
+Started GET "/signup" for 127.0.0.1 at 2017-08-22 14:52:35 -0400
+Processing by UserController#new as HTML
+  Rendering user/new.html.erb within layouts/application
+  Rendered user/new.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 38ms (Views: 35.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-08-22 14:52:58 -0400
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:269:in `const_get'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:269:in `block in constantize'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `constantize'
+actionpack (5.1.2) lib/action_dispatch/http/request.rb:82:in `controller_class'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:832:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.2) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/signup" for 127.0.0.1 at 2017-08-22 14:59:40 -0400
+Processing by UserController#new as HTML
+  Rendering user/new.html.erb within layouts/application
+  Rendered user/new.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 75ms (Views: 64.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-08-22 15:03:05 -0400
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:269:in `const_get'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:269:in `block in constantize'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `constantize'
+actionpack (5.1.2) lib/action_dispatch/http/request.rb:82:in `controller_class'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:832:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.2) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/users" for 127.0.0.1 at 2017-08-22 15:05:26 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uLOGzqq233K3rFQNg+xw2jVVjWypJrpHyD/874EqGgrXOZFh11Fi3kyBbMP8tiSm3pqVw/0Zx+JTq/jMye+OXg==", "user"=>{"name"=>"bob", "email"=>"bob@yahoo.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 164ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `user_params' for #<UsersController:0x007fe8b422f890>
+Did you mean?  user_path):
+  
+app/controllers/users_controller.rb:7:in `create'
+Started POST "/users" for 127.0.0.1 at 2017-08-22 15:11:24 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uLOGzqq233K3rFQNg+xw2jVVjWypJrpHyD/874EqGgrXOZFh11Fi3kyBbMP8tiSm3pqVw/0Zx+JTq/jMye+OXg==", "user"=>{"name"=>"bob", "email"=>"bob@yahoo.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 262ms (ActiveRecord: 12.7ms)
+
+
+  
+NameError (undefined local variable or method `user' for #<UsersController:0x007fe8b32eed18>
+Did you mean?  @user):
+  
+app/controllers/users_controller.rb:8:in `create'
+Started POST "/users" for 127.0.0.1 at 2017-08-22 15:11:50 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uLOGzqq233K3rFQNg+xw2jVVjWypJrpHyD/874EqGgrXOZFh11Fi3kyBbMP8tiSm3pqVw/0Zx+JTq/jMye+OXg==", "user"=>{"name"=>"bob", "email"=>"bob@yahoo.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (2.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (19.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "bob"], ["email", "bob@yahoo.com"], ["password_digest", "$2a$10$jrjedICQTtyAtPRnZwtMRuBqxUq4BFaaySgygB4F59.nQItcATsVq"], ["created_at", "2017-08-22 19:11:50.336131"], ["updated_at", "2017-08-22 19:11:50.336131"]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 500 Internal Server Error in 232ms (ActiveRecord: 40.9ms)
+
+
+  
+NameError (undefined local variable or method `user' for #<UsersController:0x007fe8b46caf08>
+Did you mean?  @user):
+  
+app/controllers/users_controller.rb:9:in `create'
+Started POST "/users" for 127.0.0.1 at 2017-08-22 15:13:10 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uLOGzqq233K3rFQNg+xw2jVVjWypJrpHyD/874EqGgrXOZFh11Fi3kyBbMP8tiSm3pqVw/0Zx+JTq/jMye+OXg==", "user"=>{"name"=>"bob", "email"=>"bob@yahoo.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "bob"], ["email", "bob@yahoo.com"], ["password_digest", "$2a$10$aYlkATJPfDwJ2m4rAuOJ7.Q6snS0qAjnQ1.1pnWwD/jy.XUhMhOPm"], ["created_at", "2017-08-22 19:13:10.763551"], ["updated_at", "2017-08-22 19:13:10.763551"]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+Completed 500 Internal Server Error in 247ms (ActiveRecord: 9.0ms)
+
+
+  
+NameError (undefined local variable or method `user' for #<UsersController:0x007fe8b44010b0>
+Did you mean?  @user):
+  
+app/controllers/users_controller.rb:9:in `create'
+Started POST "/users" for 127.0.0.1 at 2017-08-22 15:14:04 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uLOGzqq233K3rFQNg+xw2jVVjWypJrpHyD/874EqGgrXOZFh11Fi3kyBbMP8tiSm3pqVw/0Zx+JTq/jMye+OXg==", "user"=>{"name"=>"bob", "email"=>"bob@yahoo.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "bob"], ["email", "bob@yahoo.com"], ["password_digest", "$2a$10$LhP6wmXPlje6ZHHDXwAvkuPUg0dNr7j6bLfK618LvMk6yBr/hnKnS"], ["created_at", "2017-08-22 19:14:05.010367"], ["updated_at", "2017-08-22 19:14:05.010367"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 81ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-22 15:14:05 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  [1m[36mPiece Load (0.4ms)[0m  [1m[34mSELECT "pieces".* FROM "pieces"[0m
+  Rendered pieces/index.html.erb within layouts/application (17.3ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 3.8ms)
+
+
+  
+ActionView::Template::Error (The asset "MyString" is not present in the asset pipeline.):
+    17:     <% @pieces = @pieces.shuffle %>
+    18:     <% @pieces.each do |piece| %>
+    19:       <div class="card">
+    20:         <%= link_to image_tag(piece.url, class: "card"), piece%>
+    21:       </div>
+    22:     <% end %>
+    23:   </div>
+  
+app/views/pieces/index.html.erb:20:in `block in _app_views_pieces_index_html_erb___1667502043858524976_70318746023980'
+app/views/pieces/index.html.erb:18:in `each'
+app/views/pieces/index.html.erb:18:in `_app_views_pieces_index_html_erb___1667502043858524976_70318746023980'
+Started GET "/" for 127.0.0.1 at 2017-08-22 15:15:33 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  [1m[36mPiece Load (0.3ms)[0m  [1m[34mSELECT "pieces".* FROM "pieces"[0m
+  Rendered pieces/index.html.erb within layouts/application (6.6ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (The asset "MyString" is not present in the asset pipeline.):
+    17:     <% @pieces = @pieces.shuffle %>
+    18:     <% @pieces.each do |piece| %>
+    19:       <div class="card">
+    20:         <%= link_to image_tag(piece.url, class:"card"), piece%>
+    21:       </div>
+    22:     <% end %>
+    23:   </div>
+  
+app/views/pieces/index.html.erb:20:in `block in _app_views_pieces_index_html_erb___1667502043858524976_70318708493240'
+app/views/pieces/index.html.erb:18:in `each'
+app/views/pieces/index.html.erb:18:in `_app_views_pieces_index_html_erb___1667502043858524976_70318708493240'
+Started GET "/" for 127.0.0.1 at 2017-08-22 15:15:45 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  [1m[36mPiece Load (0.4ms)[0m  [1m[34mSELECT "pieces".* FROM "pieces"[0m
+  Rendered pieces/index.html.erb within layouts/application (5.4ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (The asset "MyString" is not present in the asset pipeline.):
+    17:     <% @pieces = @pieces.shuffle %>
+    18:     <% @pieces.each do |piece| %>
+    19:       <div class="card">
+    20:         <%= link_to image_tag(piece.url, class: "card"), piece%>
+    21:       </div>
+    22:     <% end %>
+    23:   </div>
+  
+app/views/pieces/index.html.erb:20:in `block in _app_views_pieces_index_html_erb___1667502043858524976_70318746711940'
+app/views/pieces/index.html.erb:18:in `each'
+app/views/pieces/index.html.erb:18:in `_app_views_pieces_index_html_erb___1667502043858524976_70318746711940'
+Started GET "/" for 127.0.0.1 at 2017-08-22 15:16:59 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  [1m[36mPiece Load (0.3ms)[0m  [1m[34mSELECT "pieces".* FROM "pieces"[0m
+  Rendered pieces/index.html.erb within layouts/application (7.6ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (The asset "MyString" is not present in the asset pipeline.):
+    17:     <% @pieces = @pieces.shuffle %>
+    18:     <% @pieces.each do |piece| %>
+    19:       <div class="card">
+    20:         <%= link_to image_tag(piece.url, class: "card"), pieces%>
+    21:       </div>
+    22:     <% end %>
+    23:   </div>
+  
+app/views/pieces/index.html.erb:20:in `block in _app_views_pieces_index_html_erb___1667502043858524976_70318764856960'
+app/views/pieces/index.html.erb:18:in `each'
+app/views/pieces/index.html.erb:18:in `_app_views_pieces_index_html_erb___1667502043858524976_70318764856960'
+Started GET "/" for 127.0.0.1 at 2017-08-22 15:17:19 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  [1m[36mPiece Load (0.3ms)[0m  [1m[34mSELECT "pieces".* FROM "pieces"[0m
+  Rendered pieces/index.html.erb within layouts/application (4.4ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (The asset "MyString" is not present in the asset pipeline.):
+    17:     <% @pieces = @pieces.shuffle %>
+    18:     <% @pieces.each do |piece| %>
+    19:       <div class="card">
+    20:         <%= link_to image_tag(piece.url, class: "card"), @pieces%>
+    21:       </div>
+    22:     <% end %>
+    23:   </div>
+  
+app/views/pieces/index.html.erb:20:in `block in _app_views_pieces_index_html_erb___1667502043858524976_70318750622180'
+app/views/pieces/index.html.erb:18:in `each'
+app/views/pieces/index.html.erb:18:in `_app_views_pieces_index_html_erb___1667502043858524976_70318750622180'
+Started GET "/" for 127.0.0.1 at 2017-08-22 15:17:54 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  [1m[36mPiece Load (0.3ms)[0m  [1m[34mSELECT "pieces".* FROM "pieces"[0m
+  Rendered pieces/index.html.erb within layouts/application (7.4ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (The asset "MyString" is not present in the asset pipeline.):
+    17:     <% @pieces = @pieces.shuffle %>
+    18:     <% @pieces.each do |piece| %>
+    19:       <div class="card">
+    20:         <%= link_to image_tag(piece.url, class: "card"), @pieces%>
+    21:       </div>
+    22:     <% end %>
+    23:   </div>
+  
+app/views/pieces/index.html.erb:20:in `block in _app_views_pieces_index_html_erb___1667502043858524976_70318718278580'
+app/views/pieces/index.html.erb:18:in `each'
+app/views/pieces/index.html.erb:18:in `_app_views_pieces_index_html_erb___1667502043858524976_70318718278580'
+Started GET "/" for 127.0.0.1 at 2017-08-22 15:17:57 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  [1m[36mPiece Load (0.5ms)[0m  [1m[34mSELECT "pieces".* FROM "pieces"[0m
+  Rendered pieces/index.html.erb within layouts/application (5.7ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (The asset "MyString" is not present in the asset pipeline.):
+    17:     <% @pieces = @pieces.shuffle %>
+    18:     <% @pieces.each do |piece| %>
+    19:       <div class="card">
+    20:         <%= link_to image_tag(piece.url, class: "card"), @pieces%>
+    21:       </div>
+    22:     <% end %>
+    23:   </div>
+  
+app/views/pieces/index.html.erb:20:in `block in _app_views_pieces_index_html_erb___1667502043858524976_70318745858800'
+app/views/pieces/index.html.erb:18:in `each'
+app/views/pieces/index.html.erb:18:in `_app_views_pieces_index_html_erb___1667502043858524976_70318745858800'
+Started GET "/signup" for 127.0.0.1 at 2017-08-22 15:18:03 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController):
+  
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:269:in `const_get'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:269:in `block in constantize'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `constantize'
+actionpack (5.1.2) lib/action_dispatch/http/request.rb:82:in `controller_class'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:832:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.2) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/signup" for 127.0.0.1 at 2017-08-22 15:19:03 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 47ms (Views: 31.0ms | ActiveRecord: 5.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-08-22 15:19:23 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E5BXF3a0haH2ulD2/yXjBc2udIlr0EOsFjCxOCiuOHF8GkC4C1M4DQ2XaDiAf7d5JmFsJj/vPgmNpLUbYGusJQ==", "user"=>{"name"=>"bob", "email"=>"bob@yahoo.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "bob"], ["email", "bob@yahoo.com"], ["password_digest", "$2a$10$2Y2ijYA1b.D2hzkMYuTjD.QFa1ts5IXKUa1Kaa92Gioc82yJmqU0O"], ["created_at", "2017-08-22 19:19:23.421467"], ["updated_at", "2017-08-22 19:19:23.421467"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 74ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-22 15:19:23 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  [1m[36mPiece Load (0.3ms)[0m  [1m[34mSELECT "pieces".* FROM "pieces"[0m
+  Rendered pieces/index.html.erb within layouts/application (20.4ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 9.3ms)
+
+
+  
+ActionView::Template::Error (The asset "MyString" is not present in the asset pipeline.):
+    17:     <% @pieces = @pieces.shuffle %>
+    18:     <% @pieces.each do |piece| %>
+    19:       <div class="card">
+    20:         <%= link_to image_tag(piece.url, class: "card"), @pieces%>
+    21:       </div>
+    22:     <% end %>
+    23:   </div>
+  
+app/views/pieces/index.html.erb:20:in `block in _app_views_pieces_index_html_erb___1667502043858524976_70318714252060'
+app/views/pieces/index.html.erb:18:in `each'
+app/views/pieces/index.html.erb:18:in `_app_views_pieces_index_html_erb___1667502043858524976_70318714252060'
+Started GET "/" for 127.0.0.1 at 2017-08-22 15:21:29 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  [1m[36mPiece Load (0.3ms)[0m  [1m[34mSELECT "pieces".* FROM "pieces"[0m
+  Rendered pieces/index.html.erb within layouts/application (6.7ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (The asset "MyString" is not present in the asset pipeline.):
+    17:     <% @pieces = @pieces.shuffle %>
+    18:     <% @pieces.each do |piece| %>
+    19:       <div class="card">
+    20:         <%= link_to image_tag(piece.url, class: "card"), piece%>
+    21:       </div>
+    22:     <% end %>
+    23:   </div>
+  
+app/views/pieces/index.html.erb:20:in `block in _app_views_pieces_index_html_erb___1667502043858524976_70318707704280'
+app/views/pieces/index.html.erb:18:in `each'
+app/views/pieces/index.html.erb:18:in `_app_views_pieces_index_html_erb___1667502043858524976_70318707704280'
+Started PUT "/__web_console/repl_sessions/d39b5ce40164f565e60b7a797495315a" for 127.0.0.1 at 2017-08-22 15:22:36 -0400
+Started PUT "/__web_console/repl_sessions/d39b5ce40164f565e60b7a797495315a" for 127.0.0.1 at 2017-08-22 15:22:36 -0400
+Started PUT "/__web_console/repl_sessions/d39b5ce40164f565e60b7a797495315a" for 127.0.0.1 at 2017-08-22 15:25:08 -0400
+Started PUT "/__web_console/repl_sessions/d39b5ce40164f565e60b7a797495315a" for 127.0.0.1 at 2017-08-22 15:25:11 -0400
+Started PUT "/__web_console/repl_sessions/d39b5ce40164f565e60b7a797495315a" for 127.0.0.1 at 2017-08-22 15:25:12 -0400
+Started PUT "/__web_console/repl_sessions/d39b5ce40164f565e60b7a797495315a" for 127.0.0.1 at 2017-08-22 15:25:14 -0400
+Started PUT "/__web_console/repl_sessions/d39b5ce40164f565e60b7a797495315a" for 127.0.0.1 at 2017-08-22 15:25:15 -0400
+Started PUT "/__web_console/repl_sessions/d39b5ce40164f565e60b7a797495315a" for 127.0.0.1 at 2017-08-22 15:25:16 -0400
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (22.3ms)[0m  [1m[33mUPDATE "pieces" SET "url" = $1, "updated_at" = $2 WHERE "pieces"."id" = $3[0m  [["url", "https://www.wired.com/wp-content/uploads/2016/02/puppybowl-ft-1154x630.jpg"], ["updated_at", "2017-08-22 19:25:16.464907"], ["id", 298486374]]
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+Started PUT "/__web_console/repl_sessions/d39b5ce40164f565e60b7a797495315a" for 127.0.0.1 at 2017-08-22 15:25:18 -0400
+Started PUT "/__web_console/repl_sessions/d39b5ce40164f565e60b7a797495315a" for 127.0.0.1 at 2017-08-22 15:25:20 -0400
+Started PUT "/__web_console/repl_sessions/d39b5ce40164f565e60b7a797495315a" for 127.0.0.1 at 2017-08-22 15:25:21 -0400
+Started GET "/" for 127.0.0.1 at 2017-08-22 15:25:27 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  [1m[36mPiece Load (0.3ms)[0m  [1m[34mSELECT "pieces".* FROM "pieces"[0m
+  Rendered pieces/index.html.erb within layouts/application (11.1ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (The asset "MyString" is not present in the asset pipeline.):
+    17:     <% @pieces = @pieces.shuffle %>
+    18:     <% @pieces.each do |piece| %>
+    19:       <div class="card">
+    20:         <%= link_to image_tag(piece.url, class: "card"), piece%>
+    21:       </div>
+    22:     <% end %>
+    23:   </div>
+  
+app/views/pieces/index.html.erb:20:in `block in _app_views_pieces_index_html_erb___1667502043858524976_70318717627320'
+app/views/pieces/index.html.erb:18:in `each'
+app/views/pieces/index.html.erb:18:in `_app_views_pieces_index_html_erb___1667502043858524976_70318717627320'
+Started PUT "/__web_console/repl_sessions/bea733173751b5a0b034495010e4f015" for 127.0.0.1 at 2017-08-22 15:25:47 -0400
+Started PUT "/__web_console/repl_sessions/bea733173751b5a0b034495010e4f015" for 127.0.0.1 at 2017-08-22 15:25:48 -0400
+  [1m[36mPiece Load (1.2ms)[0m  [1m[34mSELECT  "pieces".* FROM "pieces" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (5.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "pieces"[0m
+  [1m[36mPiece Load (0.6ms)[0m  [1m[34mSELECT  "pieces".* FROM "pieces" ORDER BY "pieces"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPiece Load (2.5ms)[0m  [1m[34mSELECT  "pieces".* FROM "pieces" ORDER BY "pieces"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPiece Load (0.5ms)[0m  [1m[34mSELECT  "pieces".* FROM "pieces" ORDER BY "pieces"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "pieces" SET "url" = $1, "updated_at" = $2 WHERE "pieces"."id" = $3[0m  [["url", "https://img.buzzfeed.com/buzzfeed-static/static/2014-11/4/15/enhanced/webdr03/longform-original-29174-1415133936-9.jpg?downsize=715:*&output-format=auto&output-quality=auto"], ["updated_at", "2017-08-22 19:27:55.184651"], ["id", 980190962]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 127.0.0.1 at 2017-08-22 15:27:58 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  [1m[36mPiece Load (0.3ms)[0m  [1m[34mSELECT "pieces".* FROM "pieces"[0m
+  Rendered pieces/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 31ms (Views: 29.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pieces" for 127.0.0.1 at 2017-08-22 15:28:31 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  [1m[36mPiece Load (0.3ms)[0m  [1m[34mSELECT "pieces".* FROM "pieces"[0m
+  Rendered pieces/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 31ms (Views: 27.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pieces" for 127.0.0.1 at 2017-08-22 15:28:33 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  [1m[36mPiece Load (0.3ms)[0m  [1m[34mSELECT "pieces".* FROM "pieces"[0m
+  Rendered pieces/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 22ms (Views: 18.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pieces/new/" for 127.0.0.1 at 2017-08-22 15:28:34 -0400
+Processing by PiecesController#new as HTML
+  Rendering pieces/new.html.erb within layouts/application
+  Rendered pieces/_form.html.erb (3.3ms)
+  Rendered pieces/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 27ms (Views: 22.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pieces" for 127.0.0.1 at 2017-08-22 15:28:46 -0400
+Processing by PiecesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wwZ/zGJ/XYoPpJPzwuQWLj8Su7kN3qwZ36ctPsD6Cfp4SCbF6Jm1rr9ETI0avZIG0mK54Qh7vpByVnv2CbTJUg==", "piece"=>{"title"=>"thi is bad", "url"=>"hello"}, "commit"=>"Create"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (4.6ms)[0m  [1m[32mINSERT INTO "pieces" ("title", "url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "thi is bad"], ["url", "hello"], ["created_at", "2017-08-22 19:28:46.647390"], ["updated_at", "2017-08-22 19:28:46.647390"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/pieces/980190964
+Completed 302 Found in 10ms (ActiveRecord: 5.3ms)
+
+
+Started GET "/pieces/980190964" for 127.0.0.1 at 2017-08-22 15:28:46 -0400
+Processing by PiecesController#show as HTML
+  Parameters: {"id"=>"980190964"}
+  [1m[36mPiece Load (1.2ms)[0m  [1m[34mSELECT  "pieces".* FROM "pieces" WHERE "pieces"."id" = $1 LIMIT $2[0m  [["id", 980190964], ["LIMIT", 1]]
+  Rendering pieces/show.html.erb within layouts/application
+  Rendered pieces/show.html.erb within layouts/application (9.7ms)
+Completed 500 Internal Server Error in 69ms (ActiveRecord: 15.0ms)
+
+
+  
+ActionView::Template::Error (The asset "hello" is not present in the asset pipeline.):
+    56: </p>
+    57: 
+    58: <p>
+    59:   <%= image_tag @piece.url %>
+    60: </p>
+    61: 
+    62: <div class="box">
+  
+app/views/pieces/show.html.erb:59:in `_app_views_pieces_show_html_erb___4454715949677580534_70318708153060'
+Started POST "/pieces" for 127.0.0.1 at 2017-08-22 15:30:04 -0400
+Processing by PiecesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8UsL4B47R54tBGpGLAosxCia5TOpYzOEcBF6Ss0mS9OewRxPY9z6MtYpUohTUHi4w1X9nP1cTiHrhX5phePfhw==", "piece"=>{"title"=>"this is good", "url"=>"http://cdn.crownmediadev.com/dims4/default/984424e/2147483647/thumbnail/514x320%5E/quality/90/?url=http%3A%2F%2Fimages.crownmediadev.com%2FCMS2017%2Flegacy%2F3388362517001_4024005521001_Cat-lete-Warmups.jpg"}, "commit"=>"Create"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "pieces" ("title", "url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "this is good"], ["url", "http://cdn.crownmediadev.com/dims4/default/984424e/2147483647/thumbnail/514x320%5E/quality/90/?url=http%3A%2F%2Fimages.crownmediadev.com%2FCMS2017%2Flegacy%2F3388362517001_4024005521001_Cat-lete-Warmups.jpg"], ["created_at", "2017-08-22 19:30:04.645031"], ["updated_at", "2017-08-22 19:30:04.645031"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/pieces/980190965
+Completed 302 Found in 6ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/pieces/980190965" for 127.0.0.1 at 2017-08-22 15:30:04 -0400
+Processing by PiecesController#show as HTML
+  Parameters: {"id"=>"980190965"}
+  [1m[36mPiece Load (0.3ms)[0m  [1m[34mSELECT  "pieces".* FROM "pieces" WHERE "pieces"."id" = $1 LIMIT $2[0m  [["id", 980190965], ["LIMIT", 1]]
+  Rendering pieces/show.html.erb within layouts/application
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."piece_id" = $1[0m  [["piece_id", 980190965]]
+  Rendered comments/_form.html.erb (8.6ms)
+  Rendered pieces/show.html.erb within layouts/application (41.2ms)
+Completed 200 OK in 84ms (Views: 79.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/pieces" for 127.0.0.1 at 2017-08-22 15:30:58 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  [1m[36mPiece Load (0.3ms)[0m  [1m[34mSELECT "pieces".* FROM "pieces"[0m
+  Rendered pieces/index.html.erb within layouts/application (8.2ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (The asset "hello" is not present in the asset pipeline.):
+    17:     <% @pieces = @pieces.shuffle %>
+    18:     <% @pieces.each do |piece| %>
+    19:       <div class="card">
+    20:         <%= link_to image_tag(piece.url, class: "card"), piece%>
+    21:       </div>
+    22:     <% end %>
+    23:   </div>
+  
+app/views/pieces/index.html.erb:20:in `block in _app_views_pieces_index_html_erb___1667502043858524976_70318708689520'
+app/views/pieces/index.html.erb:18:in `each'
+app/views/pieces/index.html.erb:18:in `_app_views_pieces_index_html_erb___1667502043858524976_70318708689520'
+Started GET "/" for 127.0.0.1 at 2017-08-22 15:31:11 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  [1m[36mPiece Load (0.4ms)[0m  [1m[34mSELECT "pieces".* FROM "pieces"[0m
+  Rendered pieces/index.html.erb within layouts/application (8.8ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (The asset "hello" is not present in the asset pipeline.):
+    17:     <% @pieces = @pieces.shuffle %>
+    18:     <% @pieces.each do |piece| %>
+    19:       <div class="card">
+    20:         <%= link_to image_tag(piece.url, class: "card"), piece%>
+    21:       </div>
+    22:     <% end %>
+    23:   </div>
+  
+app/views/pieces/index.html.erb:20:in `block in _app_views_pieces_index_html_erb___1667502043858524976_70318746235760'
+app/views/pieces/index.html.erb:18:in `each'
+app/views/pieces/index.html.erb:18:in `_app_views_pieces_index_html_erb___1667502043858524976_70318746235760'
+Started GET "/" for 127.0.0.1 at 2017-08-22 15:32:03 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  [1m[36mPiece Load (0.6ms)[0m  [1m[34mSELECT "pieces".* FROM "pieces"[0m
+  Rendered pieces/index.html.erb within layouts/application (9.0ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (The asset "hello" is not present in the asset pipeline.):
+    17:     <% @pieces = @pieces.shuffle %>
+    18:     <% @pieces.each do |piece| %>
+    19:       <div class="card">
+    20:         <%= link_to image_tag(piece.url, class: "card"), piece%>
+    21:       </div>
+    22:     <% end %>
+    23:   </div>
+  
+app/views/pieces/index.html.erb:20:in `block in _app_views_pieces_index_html_erb___1667502043858524976_70318717543240'
+app/views/pieces/index.html.erb:18:in `each'
+app/views/pieces/index.html.erb:18:in `_app_views_pieces_index_html_erb___1667502043858524976_70318717543240'
+Started GET "/" for 127.0.0.1 at 2017-08-22 15:38:36 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  [1m[36mPiece Load (0.3ms)[0m  [1m[34mSELECT "pieces".* FROM "pieces"[0m
+  Rendered pieces/index.html.erb within layouts/application (301.3ms)
+Completed 500 Internal Server Error in 312ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `pieces' for #<#<Class:0x007fe8b3f7c058>:0x007fe8b3280c00>
+Did you mean?  piece
+               @pieces):
+    17:     <% @pieces = @pieces.shuffle %>
+    18:     <% @pieces.each do |piece| %>
+    19:       <div class="card">
+    20:         <%= link_to image_tag(pieces.url, class: "card"), piece%>
+    21:       </div>
+    22:     <% end %>
+    23:   </div>
+  
+app/views/pieces/index.html.erb:20:in `block in _app_views_pieces_index_html_erb___1667502043858524976_70318707463480'
+app/views/pieces/index.html.erb:18:in `each'
+app/views/pieces/index.html.erb:18:in `_app_views_pieces_index_html_erb___1667502043858524976_70318707463480'
+Started GET "/" for 127.0.0.1 at 2017-08-22 15:38:49 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  [1m[36mPiece Load (0.3ms)[0m  [1m[34mSELECT "pieces".* FROM "pieces"[0m
+  Rendered pieces/index.html.erb within layouts/application (5.8ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `url' for #<Array:0x007fe8b7812688>):
+    17:     <% @pieces = @pieces.shuffle %>
+    18:     <% @pieces.each do |piece| %>
+    19:       <div class="card">
+    20:         <%= link_to image_tag(@pieces.url, class: "card"), piece%>
+    21:       </div>
+    22:     <% end %>
+    23:   </div>
+  
+app/views/pieces/index.html.erb:20:in `block in _app_views_pieces_index_html_erb___1667502043858524976_70318749899280'
+app/views/pieces/index.html.erb:18:in `each'
+app/views/pieces/index.html.erb:18:in `_app_views_pieces_index_html_erb___1667502043858524976_70318749899280'
+Started GET "/" for 127.0.0.1 at 2017-08-22 15:39:06 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  [1m[36mPiece Load (0.3ms)[0m  [1m[34mSELECT "pieces".* FROM "pieces"[0m
+  Rendered pieces/index.html.erb within layouts/application (12.1ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (The asset "hello" is not present in the asset pipeline.):
+    17:     <% @pieces = @pieces.shuffle %>
+    18:     <% @pieces.each do |piece| %>
+    19:       <div class="card">
+    20:         <%= link_to image_tag(piece.url, class: "card"), piece%>
+    21:       </div>
+    22:     <% end %>
+    23:   </div>
+  
+app/views/pieces/index.html.erb:20:in `block in _app_views_pieces_index_html_erb___1667502043858524976_70318718151100'
+app/views/pieces/index.html.erb:18:in `each'
+app/views/pieces/index.html.erb:18:in `_app_views_pieces_index_html_erb___1667502043858524976_70318718151100'
+Started GET "/" for 127.0.0.1 at 2017-08-22 15:45:19 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  [1m[36mPiece Load (0.6ms)[0m  [1m[34mSELECT "pieces".* FROM "pieces"[0m
+  Rendered pieces/index.html.erb within layouts/application (8.4ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `url' for #<Array:0x007fe8b8381f78>):
+    17:     <% @pieces = @pieces.shuffle %>
+    18:     <% @pieces.each do |piece| %>
+    19:       <div class="card">
+    20:         <%= link_to image_tag(@pieces.url, class: "card"), @pieces%>
+    21:       </div>
+    22:     <% end %>
+    23:   </div>
+  
+app/views/pieces/index.html.erb:20:in `block in _app_views_pieces_index_html_erb___1667502043858524976_70318743907980'
+app/views/pieces/index.html.erb:18:in `each'
+app/views/pieces/index.html.erb:18:in `_app_views_pieces_index_html_erb___1667502043858524976_70318743907980'
+Started GET "/" for 127.0.0.1 at 2017-08-22 15:45:35 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  [1m[36mPiece Load (0.4ms)[0m  [1m[34mSELECT "pieces".* FROM "pieces"[0m
+  Rendered pieces/index.html.erb within layouts/application (163.3ms)
+Completed 500 Internal Server Error in 171ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `piece_piece_piece_piece_path' for #<#<Class:0x007fe8b3f7c058>:0x007fe8b44e5670>):
+    17:     <% @pieces = @pieces.shuffle %>
+    18:     <% @pieces.each do |piece| %>
+    19:       <div class="card">
+    20:         <%= link_to image_tag(piece.url, class: "card"), @pieces%>
+    21:       </div>
+    22:     <% end %>
+    23:   </div>
+  
+app/views/pieces/index.html.erb:20:in `block in _app_views_pieces_index_html_erb___1667502043858524976_70318717087780'
+app/views/pieces/index.html.erb:18:in `each'
+app/views/pieces/index.html.erb:18:in `_app_views_pieces_index_html_erb___1667502043858524976_70318717087780'
+Started GET "/" for 127.0.0.1 at 2017-08-22 15:45:38 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  [1m[36mPiece Load (0.3ms)[0m  [1m[34mSELECT "pieces".* FROM "pieces"[0m
+  Rendered pieces/index.html.erb within layouts/application (127.0ms)
+Completed 500 Internal Server Error in 132ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `piece_piece_piece_piece_path' for #<#<Class:0x007fe8b3f7c058>:0x007fe8b45df918>):
+    17:     <% @pieces = @pieces.shuffle %>
+    18:     <% @pieces.each do |piece| %>
+    19:       <div class="card">
+    20:         <%= link_to image_tag(piece.url, class: "card"), @pieces%>
+    21:       </div>
+    22:     <% end %>
+    23:   </div>
+  
+app/views/pieces/index.html.erb:20:in `block in _app_views_pieces_index_html_erb___1667502043858524976_70318717608660'
+app/views/pieces/index.html.erb:18:in `each'
+app/views/pieces/index.html.erb:18:in `_app_views_pieces_index_html_erb___1667502043858524976_70318717608660'
+Started GET "/" for 127.0.0.1 at 2017-08-22 15:45:50 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  [1m[36mPiece Load (0.3ms)[0m  [1m[34mSELECT "pieces".* FROM "pieces"[0m
+  Rendered pieces/index.html.erb within layouts/application (210.9ms)
+Completed 500 Internal Server Error in 216ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `pieces' for #<#<Class:0x007fe8b3f7c058>:0x007fe8b3472360>
+Did you mean?  piece
+               @pieces):
+    17:     <% @pieces = @pieces.shuffle %>
+    18:     <% @pieces.each do |piece| %>
+    19:       <div class="card">
+    20:         <%= link_to image_tag(piece.url, class: "card"), pieces%>
+    21:       </div>
+    22:     <% end %>
+    23:   </div>
+  
+app/views/pieces/index.html.erb:20:in `block in _app_views_pieces_index_html_erb___1667502043858524976_70318708463260'
+app/views/pieces/index.html.erb:18:in `each'
+app/views/pieces/index.html.erb:18:in `_app_views_pieces_index_html_erb___1667502043858524976_70318708463260'
+Started GET "/" for 127.0.0.1 at 2017-08-22 15:46:02 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  [1m[36mPiece Load (0.3ms)[0m  [1m[34mSELECT "pieces".* FROM "pieces"[0m
+  Rendered pieces/index.html.erb within layouts/application (9.2ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (The asset "hello" is not present in the asset pipeline.):
+    17:     <% @pieces = @pieces.shuffle %>
+    18:     <% @pieces.each do |piece| %>
+    19:       <div class="card">
+    20:         <%= link_to image_tag(piece.url, class: "card"), piece%>
+    21:       </div>
+    22:     <% end %>
+    23:   </div>
+  
+app/views/pieces/index.html.erb:20:in `block in _app_views_pieces_index_html_erb___1667502043858524976_70318746696140'
+app/views/pieces/index.html.erb:18:in `each'
+app/views/pieces/index.html.erb:18:in `_app_views_pieces_index_html_erb___1667502043858524976_70318746696140'
+Started GET "/signup" for 127.0.0.1 at 2017-08-22 15:47:55 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 35ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-08-22 15:48:16 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HzzYWhMnfsTyjEVBLrRyptgvjlKvJLf2epOOkVvUIqFwts/1bsDDaAmhfY9R7ibaM+CW/fsbylPhB4qyExG29Q==", "user"=>{"name"=>"bob", "email"=>"bob@yahoo.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "bob"], ["email", "bob@yahoo.com"], ["password_digest", "$2a$10$wkNKcbOMdiNsBT7lpt6qJ.n0s7Z7Lb2N9RUnuAUHNLB/F3Dizlynq"], ["created_at", "2017-08-22 19:48:16.191455"], ["updated_at", "2017-08-22 19:48:16.191455"]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 70ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-22 15:48:16 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  [1m[36mPiece Load (0.3ms)[0m  [1m[34mSELECT "pieces".* FROM "pieces"[0m
+  Rendered pieces/index.html.erb within layouts/application (6.9ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (The asset "hello" is not present in the asset pipeline.):
+    17:     <% @pieces = @pieces.shuffle %>
+    18:     <% @pieces.each do |piece| %>
+    19:       <div class="card">
+    20:         <%= link_to image_tag(piece.url, class: "card"), piece%>
+    21:       </div>
+    22:     <% end %>
+    23:   </div>
+  
+app/views/pieces/index.html.erb:20:in `block in _app_views_pieces_index_html_erb___1667502043858524976_70318718423960'
+app/views/pieces/index.html.erb:18:in `each'
+app/views/pieces/index.html.erb:18:in `_app_views_pieces_index_html_erb___1667502043858524976_70318718423960'
+Started GET "/" for 127.0.0.1 at 2017-08-22 15:50:42 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  [1m[36mPiece Load (0.3ms)[0m  [1m[34mSELECT "pieces".* FROM "pieces"[0m
+  Rendered pieces/index.html.erb within layouts/application (16.0ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (The asset "" is not present in the asset pipeline.):
+    17:     <% @pieces = @pieces.shuffle %>
+    18:     <% @pieces.each do |piece| %>
+    19:       <div class="card">
+    20:         <%= link_to image_tag(piece, class: "card"), piece%>
+    21:       </div>
+    22:     <% end %>
+    23:   </div>
+  
+app/views/pieces/index.html.erb:20:in `block in _app_views_pieces_index_html_erb___1667502043858524976_70318715445680'
+app/views/pieces/index.html.erb:18:in `each'
+app/views/pieces/index.html.erb:18:in `_app_views_pieces_index_html_erb___1667502043858524976_70318715445680'
+Started GET "/" for 127.0.0.1 at 2017-08-22 15:50:46 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  [1m[36mPiece Load (0.4ms)[0m  [1m[34mSELECT "pieces".* FROM "pieces"[0m
+  Rendered pieces/index.html.erb within layouts/application (6.3ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (The asset "" is not present in the asset pipeline.):
+    17:     <% @pieces = @pieces.shuffle %>
+    18:     <% @pieces.each do |piece| %>
+    19:       <div class="card">
+    20:         <%= link_to image_tag(piece, class: "card"), piece%>
+    21:       </div>
+    22:     <% end %>
+    23:   </div>
+  
+app/views/pieces/index.html.erb:20:in `block in _app_views_pieces_index_html_erb___1667502043858524976_70318717739780'
+app/views/pieces/index.html.erb:18:in `each'
+app/views/pieces/index.html.erb:18:in `_app_views_pieces_index_html_erb___1667502043858524976_70318717739780'
+Started GET "/" for 127.0.0.1 at 2017-08-22 15:50:54 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  [1m[36mPiece Load (0.3ms)[0m  [1m[34mSELECT "pieces".* FROM "pieces"[0m
+  Rendered pieces/index.html.erb within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (The asset "hello" is not present in the asset pipeline.):
+    17:     <% @pieces = @pieces.shuffle %>
+    18:     <% @pieces.each do |piece| %>
+    19:       <div class="card">
+    20:         <%= link_to image_tag(piece.url, class: "card"), piece%>
+    21:       </div>
+    22:     <% end %>
+    23:   </div>
+  
+app/views/pieces/index.html.erb:20:in `block in _app_views_pieces_index_html_erb___1667502043858524976_70318744519520'
+app/views/pieces/index.html.erb:18:in `each'
+app/views/pieces/index.html.erb:18:in `_app_views_pieces_index_html_erb___1667502043858524976_70318744519520'
+Started GET "/" for 127.0.0.1 at 2017-08-22 15:53:50 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  Rendered pieces/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/lance313/Desktop/wyncode/sketch_v2/app/views/pieces/index.html.erb:20: syntax error, unexpected ',', expecting ')'
+tag(piece.url, class: "card"), piece);@output_buffer.safe_ap
+                              ^):
+  
+app/views/pieces/index.html.erb:20: syntax error, unexpected ',', expecting ')'
+Started GET "/" for 127.0.0.1 at 2017-08-22 15:53:52 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  Rendered pieces/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/lance313/Desktop/wyncode/sketch_v2/app/views/pieces/index.html.erb:20: syntax error, unexpected ',', expecting ')'
+tag(piece.url, class: "card"), piece);@output_buffer.safe_ap
+                              ^):
+  
+app/views/pieces/index.html.erb:20: syntax error, unexpected ',', expecting ')'
+Started GET "/" for 127.0.0.1 at 2017-08-22 15:54:10 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  [1m[36mPiece Load (0.3ms)[0m  [1m[34mSELECT "pieces".* FROM "pieces"[0m
+  Rendered pieces/index.html.erb within layouts/application (9.2ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (The asset "hello" is not present in the asset pipeline.):
+    17:     <% @pieces = @pieces.shuffle %>
+    18:     <% @pieces.each do |piece| %>
+    19:       <div class="card">
+    20:         <%= link_to image_tag(piece.url, class: "card"), piece%>
+    21:       </div>
+    22:     <% end %>
+    23:   </div>
+  
+app/views/pieces/index.html.erb:20:in `block in _app_views_pieces_index_html_erb___1667502043858524976_70318744361540'
+app/views/pieces/index.html.erb:18:in `each'
+app/views/pieces/index.html.erb:18:in `_app_views_pieces_index_html_erb___1667502043858524976_70318744361540'
+Started GET "/" for 127.0.0.1 at 2017-08-22 15:56:43 -0400
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  [1m[36mPiece Load (0.9ms)[0m  [1m[34mSELECT "pieces".* FROM "pieces"[0m
+  Rendered pieces/index.html.erb within layouts/application (132.1ms)
+Completed 500 Internal Server Error in 159ms (ActiveRecord: 7.4ms)
+
+
+  
+ActionView::Template::Error (The asset "hello" is not present in the asset pipeline.):
+    17:     <% @pieces = @pieces.shuffle %>
+    18:     <% @pieces.each do |piece| %>
+    19:       <div class="card">
+    20:         <%= link_to image_tag(piece.url, class: "card"), piece%>
+    21:       </div>
+    22:     <% end %>
+    23:   </div>
+  
+app/views/pieces/index.html.erb:20:in `block in _app_views_pieces_index_html_erb___1518784142533386468_70333620200820'
+app/views/pieces/index.html.erb:18:in `each'
+app/views/pieces/index.html.erb:18:in `_app_views_pieces_index_html_erb___1518784142533386468_70333620200820'
+Started GET "/" for 127.0.0.1 at 2017-08-22 15:57:03 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  Rendered pieces/index.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/lance313/Desktop/wyncode/sketch_v2/app/views/pieces/index.html.erb:21: syntax error, unexpected '<'
+      </div>
+       ^
+/Users/lance313/Desktop/wyncode/sketch_v2/app/views/pieces/index.html.erb:23: unknown regexp options - dv
+/Users/lance313/Desktop/wyncode/sketch_v2/app/views/pieces/index.html.erb:24: syntax error, unexpected '<'
+</div>
+ ^
+/Users/lance313/Desktop/wyncode/sketch_v2/app/views/pieces/index.html.erb:28: unknown regexp options - btt
+/Users/lance313/Desktop/wyncode/sketch_v2/app/views/pieces/index.html.erb:28: syntax error, unexpected '<'
+tn-lg btn-block">Top</button></a>
+                              ^
+/Users/lance313/Desktop/wyncode/sketch_v2/app/views/pieces/index.html.erb:28: unterminated regexp meets end of file):
+  
+app/views/pieces/index.html.erb:21: syntax error, unexpected '<'
+app/views/pieces/index.html.erb:23: unknown regexp options - dv
+app/views/pieces/index.html.erb:24: syntax error, unexpected '<'
+app/views/pieces/index.html.erb:28: unknown regexp options - btt
+app/views/pieces/index.html.erb:28: syntax error, unexpected '<'
+app/views/pieces/index.html.erb:28: unterminated regexp meets end of file
+Started GET "/" for 127.0.0.1 at 2017-08-22 15:57:38 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  Rendered pieces/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/lance313/Desktop/wyncode/sketch_v2/app/views/pieces/index.html.erb:21: syntax error, unexpected '<'
+      <!-- </div> -->
+       ^
+/Users/lance313/Desktop/wyncode/sketch_v2/app/views/pieces/index.html.erb:21: syntax error, unexpected '<'
+      <!-- </div> -->
+            ^
+/Users/lance313/Desktop/wyncode/sketch_v2/app/views/pieces/index.html.erb:23: unknown regexp options - dv
+/Users/lance313/Desktop/wyncode/sketch_v2/app/views/pieces/index.html.erb:24: syntax error, unexpected '<'
+</div>
+ ^
+/Users/lance313/Desktop/wyncode/sketch_v2/app/views/pieces/index.html.erb:28: unknown regexp options - btt
+/Users/lance313/Desktop/wyncode/sketch_v2/app/views/pieces/index.html.erb:28: syntax error, unexpected '<'
+tn-lg btn-block">Top</button></a>
+                              ^
+/Users/lance313/Desktop/wyncode/sketch_v2/app/views/pieces/index.html.erb:28: unterminated regexp meets end of file):
+  
+app/views/pieces/index.html.erb:21: syntax error, unexpected '<'
+app/views/pieces/index.html.erb:21: syntax error, unexpected '<'
+app/views/pieces/index.html.erb:23: unknown regexp options - dv
+app/views/pieces/index.html.erb:24: syntax error, unexpected '<'
+app/views/pieces/index.html.erb:28: unknown regexp options - btt
+app/views/pieces/index.html.erb:28: syntax error, unexpected '<'
+app/views/pieces/index.html.erb:28: unterminated regexp meets end of file
+Started GET "/" for 127.0.0.1 at 2017-08-22 15:58:07 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  Rendered pieces/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/lance313/Desktop/wyncode/sketch_v2/app/views/pieces/index.html.erb:21: syntax error, unexpected '<'
+        <h3>Testing</h3>
+         ^
+/Users/lance313/Desktop/wyncode/sketch_v2/app/views/pieces/index.html.erb:22: unknown regexp options - dv
+/Users/lance313/Desktop/wyncode/sketch_v2/app/views/pieces/index.html.erb:25: unknown regexp options - dv
+/Users/lance313/Desktop/wyncode/sketch_v2/app/views/pieces/index.html.erb:27: syntax error, unexpected '<'
+/Users/lance313/Desktop/wyncode/sketch_v2/app/views/pieces/index.html.erb:29: syntax error, unexpected tIDENTIFIER, expecting ')'
+<a class="jump_up" href="#"><type="button" class="btn
+                       ^
+/Users/lance313/Desktop/wyncode/sketch_v2/app/views/pieces/index.html.erb:29: syntax error, unexpected '<'
+<a class="jump_up" href="#"><type="button" class="btn btn-s
+                             ^
+/Users/lance313/Desktop/wyncode/sketch_v2/app/views/pieces/index.html.erb:29: syntax error, unexpected keyword_class, expecting ')'
+ href="#"><type="button" class="btn btn-secondary btn-lg btn
+                              ^
+/Users/lance313/Desktop/wyncode/sketch_v2/app/views/pieces/index.html.erb:29: unknown regexp option - a
+/Users/lance313/Desktop/wyncode/sketch_v2/app/views/pieces/index.html.erb:30: unterminated string meets end of file
+/Users/lance313/Desktop/wyncode/sketch_v2/app/views/pieces/index.html.erb:30: syntax error, unexpected end-of-input, expecting ')'):
+  
+app/views/pieces/index.html.erb:21: syntax error, unexpected '<'
+app/views/pieces/index.html.erb:22: unknown regexp options - dv
+app/views/pieces/index.html.erb:25: unknown regexp options - dv
+app/views/pieces/index.html.erb:27: syntax error, unexpected '<'
+app/views/pieces/index.html.erb:29: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/pieces/index.html.erb:29: syntax error, unexpected '<'
+app/views/pieces/index.html.erb:29: syntax error, unexpected keyword_class, expecting ')'
+app/views/pieces/index.html.erb:29: unknown regexp option - a
+app/views/pieces/index.html.erb:30: unterminated string meets end of file
+app/views/pieces/index.html.erb:30: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/" for 127.0.0.1 at 2017-08-22 15:58:29 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  Rendered pieces/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/lance313/Desktop/wyncode/sketch_v2/app/views/pieces/index.html.erb:22: unknown regexp options - dv
+/Users/lance313/Desktop/wyncode/sketch_v2/app/views/pieces/index.html.erb:24: syntax error, unexpected '<'
+/Users/lance313/Desktop/wyncode/sketch_v2/app/views/pieces/index.html.erb:26: syntax error, unexpected tIDENTIFIER, expecting ')'
+<a class="jump_up" href="#"><type="button" class="btn
+                       ^
+/Users/lance313/Desktop/wyncode/sketch_v2/app/views/pieces/index.html.erb:26: syntax error, unexpected '<'
+<a class="jump_up" href="#"><type="button" class="btn btn-s
+                             ^
+/Users/lance313/Desktop/wyncode/sketch_v2/app/views/pieces/index.html.erb:26: syntax error, unexpected keyword_class, expecting ')'
+ href="#"><type="button" class="btn btn-secondary btn-lg btn
+                              ^
+/Users/lance313/Desktop/wyncode/sketch_v2/app/views/pieces/index.html.erb:26: unknown regexp option - a
+/Users/lance313/Desktop/wyncode/sketch_v2/app/views/pieces/index.html.erb:27: unterminated string meets end of file
+/Users/lance313/Desktop/wyncode/sketch_v2/app/views/pieces/index.html.erb:27: syntax error, unexpected end-of-input, expecting ')'):
+  
+app/views/pieces/index.html.erb:22: unknown regexp options - dv
+app/views/pieces/index.html.erb:24: syntax error, unexpected '<'
+app/views/pieces/index.html.erb:26: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/pieces/index.html.erb:26: syntax error, unexpected '<'
+app/views/pieces/index.html.erb:26: syntax error, unexpected keyword_class, expecting ')'
+app/views/pieces/index.html.erb:26: unknown regexp option - a
+app/views/pieces/index.html.erb:27: unterminated string meets end of file
+app/views/pieces/index.html.erb:27: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/" for 127.0.0.1 at 2017-08-22 15:58:31 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  Rendered pieces/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/lance313/Desktop/wyncode/sketch_v2/app/views/pieces/index.html.erb:22: unknown regexp options - dv
+/Users/lance313/Desktop/wyncode/sketch_v2/app/views/pieces/index.html.erb:24: syntax error, unexpected '<'
+/Users/lance313/Desktop/wyncode/sketch_v2/app/views/pieces/index.html.erb:26: syntax error, unexpected tIDENTIFIER, expecting ')'
+<a class="jump_up" href="#"><type="button" class="btn
+                       ^
+/Users/lance313/Desktop/wyncode/sketch_v2/app/views/pieces/index.html.erb:26: syntax error, unexpected '<'
+<a class="jump_up" href="#"><type="button" class="btn btn-s
+                             ^
+/Users/lance313/Desktop/wyncode/sketch_v2/app/views/pieces/index.html.erb:26: syntax error, unexpected keyword_class, expecting ')'
+ href="#"><type="button" class="btn btn-secondary btn-lg btn
+                              ^
+/Users/lance313/Desktop/wyncode/sketch_v2/app/views/pieces/index.html.erb:26: unknown regexp option - a
+/Users/lance313/Desktop/wyncode/sketch_v2/app/views/pieces/index.html.erb:27: unterminated string meets end of file
+/Users/lance313/Desktop/wyncode/sketch_v2/app/views/pieces/index.html.erb:27: syntax error, unexpected end-of-input, expecting ')'):
+  
+app/views/pieces/index.html.erb:22: unknown regexp options - dv
+app/views/pieces/index.html.erb:24: syntax error, unexpected '<'
+app/views/pieces/index.html.erb:26: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/pieces/index.html.erb:26: syntax error, unexpected '<'
+app/views/pieces/index.html.erb:26: syntax error, unexpected keyword_class, expecting ')'
+app/views/pieces/index.html.erb:26: unknown regexp option - a
+app/views/pieces/index.html.erb:27: unterminated string meets end of file
+app/views/pieces/index.html.erb:27: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/" for 127.0.0.1 at 2017-08-22 15:59:29 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  [1m[36mPiece Load (0.3ms)[0m  [1m[34mSELECT "pieces".* FROM "pieces"[0m
+  Rendered pieces/index.html.erb within layouts/application (5.1ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (The asset "hello" is not present in the asset pipeline.):
+    17:     <% @pieces = @pieces.shuffle %>
+    18:     <% @pieces.each do |piece| %>
+    19:       <div class="card">
+    20:         <%= link_to image_tag(piece.url, class: "card")%>
+    21:       </div>
+    22:     <% end %>
+    23:   </div>
+  
+app/views/pieces/index.html.erb:20:in `block in _app_views_pieces_index_html_erb___1518784142533386468_70333626402840'
+app/views/pieces/index.html.erb:18:in `each'
+app/views/pieces/index.html.erb:18:in `_app_views_pieces_index_html_erb___1518784142533386468_70333626402840'
+Started GET "/" for 127.0.0.1 at 2017-08-22 16:00:21 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  [1m[36mPiece Load (0.3ms)[0m  [1m[34mSELECT "pieces".* FROM "pieces"[0m
+  Rendered pieces/index.html.erb within layouts/application (10.8ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (The asset "hello" is not present in the asset pipeline.):
+    17:     <% @pieces = @pieces.shuffle %>
+    18:     <% @pieces.each do |piece| %>
+    19:       <div class="card">
+    20:         <%= link_to image_tag(piece.url, class: "card"), piece%>
+    21:       </div>
+    22:     <% end %>
+    23:   </div>
+  
+app/views/pieces/index.html.erb:20:in `block in _app_views_pieces_index_html_erb___1518784142533386468_70333653339220'
+app/views/pieces/index.html.erb:18:in `each'
+app/views/pieces/index.html.erb:18:in `_app_views_pieces_index_html_erb___1518784142533386468_70333653339220'
+Started PUT "/__web_console/repl_sessions/18e0e56bfbece3bd42059a46c0891bbe" for 127.0.0.1 at 2017-08-22 16:00:50 -0400
+Started PUT "/__web_console/repl_sessions/18e0e56bfbece3bd42059a46c0891bbe" for 127.0.0.1 at 2017-08-22 16:00:52 -0400
+Started PUT "/__web_console/repl_sessions/18e0e56bfbece3bd42059a46c0891bbe" for 127.0.0.1 at 2017-08-22 16:00:54 -0400
+Started PUT "/__web_console/repl_sessions/18e0e56bfbece3bd42059a46c0891bbe" for 127.0.0.1 at 2017-08-22 16:00:57 -0400
+Started PUT "/__web_console/repl_sessions/18e0e56bfbece3bd42059a46c0891bbe" for 127.0.0.1 at 2017-08-22 16:00:58 -0400
+  [1m[36mPiece Load (0.4ms)[0m  [1m[34mSELECT  "pieces".* FROM "pieces" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mPiece Load (0.4ms)[0m  [1m[34mSELECT  "pieces".* FROM "pieces" LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2017-08-22 16:02:56 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  [1m[36mPiece Load (0.4ms)[0m  [1m[34mSELECT "pieces".* FROM "pieces"[0m
+  Rendered pieces/index.html.erb within layouts/application (13.4ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (The asset "" is not present in the asset pipeline.):
+    17:     <% @pieces = @pieces.shuffle %>
+    18:     <% @pieces.each do |piece| %>
+    19:       <div class="card">
+    20:         <%= link_to image_tag(piece, class: "card"), piece%>
+    21:       </div>
+    22:     <% end %>
+    23:   </div>
+  
+app/views/pieces/index.html.erb:20:in `block in _app_views_pieces_index_html_erb___1518784142533386468_70333616819180'
+app/views/pieces/index.html.erb:18:in `each'
+app/views/pieces/index.html.erb:18:in `_app_views_pieces_index_html_erb___1518784142533386468_70333616819180'
+Started GET "/" for 127.0.0.1 at 2017-08-22 16:03:26 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  [1m[36mPiece Load (0.3ms)[0m  [1m[34mSELECT "pieces".* FROM "pieces"[0m
+  Rendered pieces/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 74ms (Views: 71.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pieces/298486374" for 127.0.0.1 at 2017-08-22 16:03:34 -0400
+Processing by PiecesController#show as HTML
+  Parameters: {"id"=>"298486374"}
+  [1m[36mPiece Load (0.5ms)[0m  [1m[34mSELECT  "pieces".* FROM "pieces" WHERE "pieces"."id" = $1 LIMIT $2[0m  [["id", 298486374], ["LIMIT", 1]]
+  Rendering pieces/show.html.erb within layouts/application
+  [1m[36mComment Load (2.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."piece_id" = $1[0m  [["piece_id", 298486374]]
+  Rendered comments/_form.html.erb (14.3ms)
+  Rendered pieces/show.html.erb within layouts/application (55.6ms)
+Completed 200 OK in 104ms (Views: 76.5ms | ActiveRecord: 8.6ms)
+
+
+  [1m[36mPiece Load (0.9ms)[0m  [1m[34mSELECT  "pieces".* FROM "pieces" WHERE "pieces"."id" = $1 LIMIT $2[0m  [["id", 980190964], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (7.7ms)[0m  [1m[31mDELETE FROM "pieces" WHERE "pieces"."id" = $1[0m  [["id", 980190964]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 127.0.0.1 at 2017-08-22 16:06:18 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  [1m[36mPiece Load (0.3ms)[0m  [1m[34mSELECT "pieces".* FROM "pieces"[0m
+  Rendered pieces/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 31ms (Views: 28.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-22 16:06:24 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  [1m[36mPiece Load (0.6ms)[0m  [1m[34mSELECT "pieces".* FROM "pieces"[0m
+  Rendered pieces/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 38ms (Views: 33.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pieces/new/" for 127.0.0.1 at 2017-08-22 16:06:34 -0400
+Processing by PiecesController#new as HTML
+  Rendering pieces/new.html.erb within layouts/application
+  Rendered pieces/_form.html.erb (4.4ms)
+  Rendered pieces/new.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 49ms (Views: 45.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pieces" for 127.0.0.1 at 2017-08-22 16:08:09 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  [1m[36mPiece Load (0.3ms)[0m  [1m[34mSELECT "pieces".* FROM "pieces"[0m
+  Rendered pieces/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 22ms (Views: 19.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pieces" for 127.0.0.1 at 2017-08-22 16:08:11 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  [1m[36mPiece Load (0.3ms)[0m  [1m[34mSELECT "pieces".* FROM "pieces"[0m
+  Rendered pieces/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 29ms (Views: 25.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pieces" for 127.0.0.1 at 2017-08-22 16:08:12 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  [1m[36mPiece Load (0.3ms)[0m  [1m[34mSELECT "pieces".* FROM "pieces"[0m
+  Rendered pieces/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 24ms (Views: 19.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2017-08-22 16:08:21 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 30ms (Views: 17.9ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-08-22 16:08:42 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HFEH0k3pn4z0ZBwBd0qE9Cfl5JYnQAm/6996AjM4+Glz2xB9MA4iIA9JJM8IENCIzCr8OXN/dBpwS34he/1sPQ==", "user"=>{"name"=>"bob", "email"=>"steve@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "bob"], ["email", "steve@gmail.com"], ["password_digest", "$2a$10$QLDl0ywPlSnRLzwV8FxwBOm70/529e2/XaMGUGbCjnjdeCGyIRkoO"], ["created_at", "2017-08-22 20:08:42.711005"], ["updated_at", "2017-08-22 20:08:42.711005"]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 74ms (ActiveRecord: 5.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-22 16:08:42 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  [1m[36mPiece Load (0.3ms)[0m  [1m[34mSELECT "pieces".* FROM "pieces"[0m
+  Rendered pieces/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pieces" for 127.0.0.1 at 2017-08-22 16:08:54 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  [1m[36mPiece Load (0.3ms)[0m  [1m[34mSELECT "pieces".* FROM "pieces"[0m
+  Rendered pieces/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 21ms (Views: 18.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-08-22 16:09:01 -0400
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for UsersController):
+  
+actionpack (5.1.2) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.2) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.2) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:832:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.2) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users/new" for 127.0.0.1 at 2017-08-22 16:09:12 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 20ms (Views: 18.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-08-22 16:09:15 -0400
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for UsersController):
+  
+actionpack (5.1.2) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.2) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.2) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:832:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.2) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/user" for 127.0.0.1 at 2017-08-22 16:09:18 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/user"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/session" for 127.0.0.1 at 2017-08-22 16:09:28 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/session"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/session/login" for 127.0.0.1 at 2017-08-22 16:09:33 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/session/login"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/pieces/298486374" for 127.0.0.1 at 2017-08-22 16:09:46 -0400
+Processing by PiecesController#show as HTML
+  Parameters: {"id"=>"298486374"}
+  [1m[36mPiece Load (0.4ms)[0m  [1m[34mSELECT  "pieces".* FROM "pieces" WHERE "pieces"."id" = $1 LIMIT $2[0m  [["id", 298486374], ["LIMIT", 1]]
+  Rendering pieces/show.html.erb within layouts/application
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."piece_id" = $1[0m  [["piece_id", 298486374]]
+  Rendered comments/_form.html.erb (2.1ms)
+  Rendered pieces/show.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 33ms (Views: 28.3ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/comments" for 127.0.0.1 at 2017-08-22 16:09:52 -0400
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0B1dIWOC79hh/0jPGFfcHNPhKgOzVgwRlo01ahOKzGliJUkK7jp7M1xRCPxVJnanZyy0H9vZA02u8aX8bsKqJg==", "comment"=>{"comment"=>"nice", "piece_id"=>"298486374"}, "commit"=>"Create Comment"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPiece Load (0.3ms)[0m  [1m[34mSELECT  "pieces".* FROM "pieces" WHERE "pieces"."id" = $1 LIMIT $2[0m  [["id", 298486374], ["LIMIT", 1]]
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "comments" ("comment", "piece_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["comment", "nice"], ["piece_id", 298486374], ["created_at", "2017-08-22 20:09:52.672382"], ["updated_at", "2017-08-22 20:09:52.672382"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/pieces/298486374
+Completed 302 Found in 10ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/pieces/298486374" for 127.0.0.1 at 2017-08-22 16:09:52 -0400
+Processing by PiecesController#show as HTML
+  Parameters: {"id"=>"298486374"}
+  [1m[36mPiece Load (0.3ms)[0m  [1m[34mSELECT  "pieces".* FROM "pieces" WHERE "pieces"."id" = $1 LIMIT $2[0m  [["id", 298486374], ["LIMIT", 1]]
+  Rendering pieces/show.html.erb within layouts/application
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."piece_id" = $1[0m  [["piece_id", 298486374]]
+  Rendered comments/_form.html.erb (2.3ms)
+  Rendered pieces/show.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 24ms (Views: 20.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pieces" for 127.0.0.1 at 2017-08-22 16:10:30 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  [1m[36mPiece Load (0.3ms)[0m  [1m[34mSELECT "pieces".* FROM "pieces"[0m
+  Rendered pieces/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 24ms (Views: 20.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pieces/980190962" for 127.0.0.1 at 2017-08-22 16:10:31 -0400
+Processing by PiecesController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mPiece Load (0.4ms)[0m  [1m[34mSELECT  "pieces".* FROM "pieces" WHERE "pieces"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering pieces/show.html.erb within layouts/application
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."piece_id" = $1[0m  [["piece_id", 980190962]]
+  Rendered comments/_form.html.erb (2.3ms)
+  Rendered pieces/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 28ms (Views: 24.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/comments/" for 127.0.0.1 at 2017-08-22 16:10:35 -0400
+Processing by CommentsController#index as HTML
+  Rendering comments/index.html.erb within layouts/application
+  [1m[36mComment Load (1.7ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" ORDER BY "comments"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  [1m[36mPiece Load (0.4ms)[0m  [1m[34mSELECT  "pieces".* FROM "pieces" WHERE "pieces"."id" = $1 LIMIT $2[0m  [["id", 298486374], ["LIMIT", 1]]
+  [1m[36mPiece Load (0.2ms)[0m  [1m[34mSELECT  "pieces".* FROM "pieces" WHERE "pieces"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mCACHE Piece Load (0.0ms)[0m  [1m[34mSELECT  "pieces".* FROM "pieces" WHERE "pieces"."id" = $1 LIMIT $2[0m  [["id", 298486374], ["LIMIT", 1]]
+  Rendered comments/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 35ms (Views: 27.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/pieces" for 127.0.0.1 at 2017-08-22 16:25:02 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  [1m[36mPiece Load (0.6ms)[0m  [1m[34mSELECT "pieces".* FROM "pieces"[0m
+  Rendered pieces/index.html.erb within layouts/application (20.9ms)
+Completed 200 OK in 50ms (Views: 35.2ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/pieces" for 127.0.0.1 at 2017-08-22 16:25:02 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  [1m[36mPiece Load (0.3ms)[0m  [1m[34mSELECT "pieces".* FROM "pieces"[0m
+  Rendered pieces/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 26ms (Views: 23.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pieces" for 127.0.0.1 at 2017-08-22 16:25:03 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  [1m[36mPiece Load (0.4ms)[0m  [1m[34mSELECT "pieces".* FROM "pieces"[0m
+  Rendered pieces/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 26ms (Views: 22.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pieces/298486374" for 127.0.0.1 at 2017-08-22 16:25:05 -0400
+Processing by PiecesController#show as HTML
+  Parameters: {"id"=>"298486374"}
+  [1m[36mPiece Load (0.4ms)[0m  [1m[34mSELECT  "pieces".* FROM "pieces" WHERE "pieces"."id" = $1 LIMIT $2[0m  [["id", 298486374], ["LIMIT", 1]]
+  Rendering pieces/show.html.erb within layouts/application
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."piece_id" = $1[0m  [["piece_id", 298486374]]
+  Rendered comments/_form.html.erb (4.6ms)
+  Rendered pieces/show.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 64ms (Views: 38.5ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/pieces" for 127.0.0.1 at 2017-08-22 16:25:06 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  [1m[36mPiece Load (0.3ms)[0m  [1m[34mSELECT "pieces".* FROM "pieces"[0m
+  Rendered pieces/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 26ms (Views: 22.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-22 16:25:09 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 22ms (Views: 19.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-22 16:25:40 -0400
+  
+ArgumentError (Missing :controller key on routes definition, please check your routes.):
+  
+config/routes.rb:25:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+Started GET "/" for 127.0.0.1 at 2017-08-22 16:26:16 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  [1m[36mPiece Load (0.3ms)[0m  [1m[34mSELECT "pieces".* FROM "pieces"[0m
+  Rendered pieces/index.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 32ms (Views: 22.3ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-22 16:41:18 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  [1m[36mPiece Load (0.3ms)[0m  [1m[34mSELECT "pieces".* FROM "pieces"[0m
+  Rendered pieces/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 34ms (Views: 30.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-08-22 16:41:23 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 32ms (Views: 17.8ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-08-22 16:49:39 -0400
+  
+SyntaxError (/Users/lance313/Desktop/wyncode/sketch_v2/config/routes.rb:2: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+  get '/' to: 'session#new'
+            ^):
+  
+config/routes.rb:2: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+Started GET "/" for 127.0.0.1 at 2017-08-22 16:49:54 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-08-22 16:50:28 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 25ms (Views: 23.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-22 16:56:47 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (249.1ms)
+Completed 500 Internal Server Error in 255ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `sessions_path' for #<#<Class:0x007fefa9c910a8>:0x007fefa9b18ac8>
+Did you mean?  sessions_login_path):
+    1: <h1>Log in</h1>
+    2: <%= form_tag sessions_path do %>
+    3: <p>
+    4: <%= label_tag :username %> <%= text_field_tag :username %>
+    5: </p>
+  
+app/views/sessions/new.html.erb:2:in `_app_views_sessions_new_html_erb___192487655794893138_70333660451700'
+Started GET "/" for 127.0.0.1 at 2017-08-22 16:56:52 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (235.1ms)
+Completed 500 Internal Server Error in 241ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `sessions_path' for #<#<Class:0x007fefa9c910a8>:0x007fefa8da95e0>
+Did you mean?  sessions_login_path):
+    1: <h1>Log in</h1>
+    2: <%= form_tag sessions_path do %>
+    3: <p>
+    4: <%= label_tag :username %> <%= text_field_tag :username %>
+    5: </p>
+  
+app/views/sessions/new.html.erb:2:in `_app_views_sessions_new_html_erb___192487655794893138_70333653405680'
+Started GET "/" for 127.0.0.1 at 2017-08-22 16:58:40 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 48ms (Views: 46.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions/login" for 127.0.0.1 at 2017-08-22 16:58:52 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/sessions/login"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/sessions/login" for 127.0.0.1 at 2017-08-22 17:00:00 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/sessions/login"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/sessions/login" for 127.0.0.1 at 2017-08-22 17:00:08 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/sessions/login"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/sessions/login" for 127.0.0.1 at 2017-08-22 17:00:48 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/sessions/login"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/pieces" for 127.0.0.1 at 2017-08-22 17:00:54 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  [1m[36mPiece Load (0.7ms)[0m  [1m[34mSELECT "pieces".* FROM "pieces"[0m
+  Rendered pieces/index.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 49ms (Views: 31.9ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-22 17:00:59 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions/login" for 127.0.0.1 at 2017-08-22 17:01:47 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/sessions/login"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/sessions/login" for 127.0.0.1 at 2017-08-22 17:03:16 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/sessions/login"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/sessions/login" for 127.0.0.1 at 2017-08-22 17:04:35 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/sessions/login"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/sessions/login" for 127.0.0.1 at 2017-08-22 17:05:10 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/sessions/login"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/sessions/login" for 127.0.0.1 at 2017-08-22 17:06:28 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/sessions/login"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-08-22 17:06:39 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 27ms (Views: 25.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions/login" for 127.0.0.1 at 2017-08-22 17:06:46 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/sessions/login"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/sessions/login" for 127.0.0.1 at 2017-08-22 17:07:03 -0400
+  
+SyntaxError (/Users/lance313/Desktop/wyncode/sketch_v2/config/routes.rb:14: syntax error, unexpected =>
+  get  '/signup',  => 'users#new'
+                     ^):
+  
+config/routes.rb:14: syntax error, unexpected =>
+Started POST "/sessions/login" for 127.0.0.1 at 2017-08-22 17:07:36 -0400
+  
+SyntaxError (/Users/lance313/Desktop/wyncode/sketch_v2/config/routes.rb:6: syntax error, unexpected =>
+  get 'sessions/login', => 'pieces#in'
+                          ^):
+  
+config/routes.rb:6: syntax error, unexpected =>
+Started POST "/sessions/login" for 127.0.0.1 at 2017-08-22 17:07:51 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/sessions/login"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/sessions/login" for 127.0.0.1 at 2017-08-22 17:08:43 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/sessions/login"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/sessions/login" for 127.0.0.1 at 2017-08-22 17:08:47 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/sessions/login"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/sessions/login" for 127.0.0.1 at 2017-08-22 17:09:24 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/sessions/login"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/sessions/new" for 127.0.0.1 at 2017-08-22 17:13:20 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/sessions/new"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/sessions/" for 127.0.0.1 at 2017-08-22 17:32:59 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/sessions"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-08-22 17:33:44 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 72ms (Views: 68.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions/login" for 127.0.0.1 at 2017-08-22 17:33:52 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/sessions/login"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/sessions/login" for 127.0.0.1 at 2017-08-22 17:34:29 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/sessions/login"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/sessions/login" for 127.0.0.1 at 2017-08-22 17:41:05 -0400
+  
+ArgumentError (Missing :controller key on routes definition, please check your routes.):
+  
+config/routes.rb:2:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+Started POST "/sessions/login" for 127.0.0.1 at 2017-08-22 17:41:20 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/sessions/login"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/sessions/login" for 127.0.0.1 at 2017-08-22 17:53:19 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/sessions/login"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/sessions" for 127.0.0.1 at 2017-08-22 17:58:38 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/sessions"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-08-22 17:58:42 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 30ms (Views: 28.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions/login" for 127.0.0.1 at 2017-08-22 17:58:48 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/sessions/login"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/sessions/login" for 127.0.0.1 at 2017-08-22 18:02:03 -0400
+Processing by SessionsController#login_attempt as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M2slkYf2wJZPVYMzOtYt8mTZxTpN2w9M7cYXqM6nOohc4TI++hF9OrR4u/1FjHmOjxbdlRnkcul2UhOLhmKu3A==", "username"=>"bob", "password"=>"[FILTERED]", "commit"=>"Log in"}
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `authenticate' for #<Class:0x007fefa8c8b5a0>):
+  
+app/controllers/sessions_controller.rb:6:in `login_attempt'
+Started POST "/sessions/login" for 127.0.0.1 at 2017-08-22 18:04:07 -0400
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#login_attempt as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M2slkYf2wJZPVYMzOtYt8mTZxTpN2w9M7cYXqM6nOohc4TI++hF9OrR4u/1FjHmOjxbdlRnkcul2UhOLhmKu3A==", "username"=>"bob", "password"=>"[FILTERED]", "commit"=>"Log in"}
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `authenticate' for #<Class:0x007f95f4b098e8>):
+  
+app/controllers/sessions_controller.rb:6:in `login_attempt'
+Started PUT "/__web_console/repl_sessions/597c65d0e1b4421f1adfef43b28623ea" for 127.0.0.1 at 2017-08-22 18:04:15 -0400
+Started PUT "/__web_console/repl_sessions/597c65d0e1b4421f1adfef43b28623ea" for 127.0.0.1 at 2017-08-22 18:04:16 -0400
+Started PUT "/__web_console/repl_sessions/597c65d0e1b4421f1adfef43b28623ea" for 127.0.0.1 at 2017-08-22 18:04:31 -0400
+Started PUT "/__web_console/repl_sessions/597c65d0e1b4421f1adfef43b28623ea" for 127.0.0.1 at 2017-08-22 18:04:34 -0400
+Started POST "/sessions/login" for 127.0.0.1 at 2017-08-22 18:09:50 -0400
+Processing by SessionsController#login_attempt as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M2slkYf2wJZPVYMzOtYt8mTZxTpN2w9M7cYXqM6nOohc4TI++hF9OrR4u/1FjHmOjxbdlRnkcul2UhOLhmKu3A==", "username"=>"bob", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 1.7ms)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:6:in `login_attempt'
+Started POST "/sessions/login" for 127.0.0.1 at 2017-08-22 18:10:38 -0400
+Processing by SessionsController#login_attempt as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M2slkYf2wJZPVYMzOtYt8mTZxTpN2w9M7cYXqM6nOohc4TI++hF9OrR4u/1FjHmOjxbdlRnkcul2UhOLhmKu3A==", "username"=>"bob", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "bob"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 116ms (ActiveRecord: 4.6ms)
+
+
+  
+ActionView::MissingTemplate (Missing template sessions/login, application/login with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/lance313/Desktop/wyncode/sketch_v2/app/views"
+):
+  
+app/controllers/sessions_controller.rb:13:in `login_attempt'
+Started POST "/sessions/login" for 127.0.0.1 at 2017-08-22 18:11:45 -0400
+Processing by SessionsController#login_attempt as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M2slkYf2wJZPVYMzOtYt8mTZxTpN2w9M7cYXqM6nOohc4TI++hF9OrR4u/1FjHmOjxbdlRnkcul2UhOLhmKu3A==", "username"=>"bob", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "bob"], ["LIMIT", 1]]
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 341ms (Views: 264.8ms | ActiveRecord: 2.0ms)
+
+
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/signup" for 127.0.0.1 at 2017-08-22 18:12:36 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (20.8ms)
+Completed 200 OK in 45ms (Views: 42.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-08-22 18:12:51 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6I0sHMUmEg45PuJ/pBPI9VR6ViYtRwCH7KYLiNsKwY2HBzuzuMGvosIT2rHbSZyJv7VOiXl4fSJ3Mg+rk89V2Q==", "user"=>{"name"=>"lance313", "email"=>"lancebrooks.313@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Redirected to http://localhost:3000/signup
+Completed 302 Found in 68ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2017-08-22 18:12:52 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 15ms (Views: 13.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/login" for 127.0.0.1 at 2017-08-22 18:13:04 -0400
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 25ms (Views: 23.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions/login" for 127.0.0.1 at 2017-08-22 18:13:11 -0400
+Processing by SessionsController#login_attempt as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6rOQgsX0imNQlZv0WF8QFVfBbT1ucqK8PXDNIGuo2ryFOYctuBM3z6u4ozonBURpvA51kjpN3xmm5MkDI21O6A==", "username_or_email"=>"lance313", "login_password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:6:in `login_attempt'
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/users" for 127.0.0.1 at 2017-08-22 18:14:54 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fcxiNX/b/rVVpVaT2a1tW7cglWjuwbchDJ8NkALYBlISRnWaAjxDGa6Ibl2m9zknXO+Nx7r+yoSXCwmzSh2SBg==", "user"=>{"name"=>"lance", "email"=>"lancebrooks.313@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "lance"], ["email", "lancebrooks.313@gmail.com"], ["password_digest", "$2a$10$qLRh.xSdjAm0GppAGt3fb.vEKi8WaNaWL25PRe8AkeEuAQfAjvzfm"], ["created_at", "2017-08-22 22:14:54.246918"], ["updated_at", "2017-08-22 22:14:54.246918"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 81ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-22 18:14:54 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 25ms (Views: 23.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions/login" for 127.0.0.1 at 2017-08-22 18:15:02 -0400
+Processing by SessionsController#login_attempt as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zg3vVbXoCvMPBZlgFDahosZAvqSbppIm5ROSdiCBc+sJh/j6yA+3X/Qooa5rbPXeLY+mC8+Z74N+h5ZVaETnvw==", "username"=>"lance", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "lance"], ["LIMIT", 1]]
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 86ms (Views: 13.5ms | ActiveRecord: 0.5ms)
+
+
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/sessions/login" for 127.0.0.1 at 2017-08-22 18:16:44 -0400
+Processing by SessionsController#login_attempt as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eCOAlQFpya8pGXYnVZzDSJ/oCxqDthWKat5W5wR562kXqZc6fI50A9I0Tukqxpc0dCcTtdeJaC/xSlLETLx/PQ==", "username_or_email"=>"lance", "login_password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 4.2ms)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:6:in `login_attempt'
+Started GET "/sessions/login" for 127.0.0.1 at 2017-08-22 18:17:13 -0400
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 25ms (Views: 23.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions/login" for 127.0.0.1 at 2017-08-22 18:17:20 -0400
+Processing by SessionsController#login_attempt as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zg3vVbXoCvMPBZlgFDahosZAvqSbppIm5ROSdiCBc+sJh/j6yA+3X/Qooa5rbPXeLY+mC8+Z74N+h5ZVaETnvw==", "username"=>"lance", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "lance"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 85ms (ActiveRecord: 7.5ms)
+
+
+  
+NoMethodError (undefined method `username' for #<User:0x007f95f8dd3bb0>):
+  
+app/controllers/sessions_controller.rb:8:in `login_attempt'
+Started POST "/sessions/login" for 127.0.0.1 at 2017-08-22 18:18:01 -0400
+Processing by SessionsController#login_attempt as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zg3vVbXoCvMPBZlgFDahosZAvqSbppIm5ROSdiCBc+sJh/j6yA+3X/Qooa5rbPXeLY+mC8+Z74N+h5ZVaETnvw==", "username"=>"lance", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "lance"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/sessions/home
+Completed 302 Found in 81ms (ActiveRecord: 6.1ms)
+
+
+Started GET "/sessions/home" for 127.0.0.1 at 2017-08-22 18:18:01 -0400
+  
+AbstractController::ActionNotFound (The action 'home' could not be found for SessionsController):
+  
+actionpack (5.1.2) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.2) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.2) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:832:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.2) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/sessions/login" for 127.0.0.1 at 2017-08-22 18:18:08 -0400
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 36ms (Views: 33.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "//login" for 127.0.0.1 at 2017-08-22 18:18:12 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/login" for 127.0.0.1 at 2017-08-22 18:18:17 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-08-22 18:18:22 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions/login" for 127.0.0.1 at 2017-08-22 18:18:32 -0400
+Processing by SessionsController#login_attempt as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yZUYAUNF/I1P6E+VWsPeK6/xvx+JFozQEuL+6m8o7DqmHw+uPqJBIbTFd1slmYpXRD6nsN0p8XWJdvrJJ+14bg==", "username"=>"lance", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "lance"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/sessions/home
+Completed 302 Found in 69ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/sessions/home" for 127.0.0.1 at 2017-08-22 18:18:33 -0400
+  
+AbstractController::ActionNotFound (The action 'home' could not be found for SessionsController):
+  
+actionpack (5.1.2) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.2) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.2) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:832:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.2) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/pieces" for 127.0.0.1 at 2017-08-22 18:21:07 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  [1m[36mPiece Load (0.6ms)[0m  [1m[34mSELECT "pieces".* FROM "pieces"[0m
+  Rendered pieces/index.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 46ms (Views: 32.4ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/pieces/980190962" for 127.0.0.1 at 2017-08-22 18:21:48 -0400
+Processing by PiecesController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mPiece Load (0.6ms)[0m  [1m[34mSELECT  "pieces".* FROM "pieces" WHERE "pieces"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering pieces/show.html.erb within layouts/application
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."piece_id" = $1[0m  [["piece_id", 980190962]]
+  Rendered comments/_form.html.erb (3.6ms)
+  Rendered pieces/show.html.erb within layouts/application (25.5ms)
+Completed 200 OK in 67ms (Views: 44.0ms | ActiveRecord: 6.4ms)
+
+
+Started POST "/comments" for 127.0.0.1 at 2017-08-22 18:21:57 -0400
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wYM2v0RLeIBHbfLUWQYVhgy8jA0B1xENdgvLr8PsPWVzuyKUyfPsa3rDsucUd789uHESEWlYHlFOd1s5vqRbKg==", "comment"=>{"comment"=>"sweet", "piece_id"=>"980190962"}, "commit"=>"Create Comment"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPiece Load (0.4ms)[0m  [1m[34mSELECT  "pieces".* FROM "pieces" WHERE "pieces"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35mSQL (2.2ms)[0m  [1m[32mINSERT INTO "comments" ("comment", "piece_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["comment", "sweet"], ["piece_id", 980190962], ["created_at", "2017-08-22 22:21:57.684578"], ["updated_at", "2017-08-22 22:21:57.684578"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/pieces/980190962
+Completed 302 Found in 10ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/pieces/980190962" for 127.0.0.1 at 2017-08-22 18:21:57 -0400
+Processing by PiecesController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mPiece Load (0.3ms)[0m  [1m[34mSELECT  "pieces".* FROM "pieces" WHERE "pieces"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering pieces/show.html.erb within layouts/application
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."piece_id" = $1[0m  [["piece_id", 980190962]]
+  Rendered comments/_form.html.erb (2.3ms)
+  Rendered pieces/show.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 32ms (Views: 29.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/pieces" for 127.0.0.1 at 2017-08-22 18:22:12 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  [1m[36mPiece Load (0.3ms)[0m  [1m[34mSELECT "pieces".* FROM "pieces"[0m
+  Rendered pieces/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 21ms (Views: 18.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-22 18:22:15 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions/login" for 127.0.0.1 at 2017-08-22 18:22:20 -0400
+Processing by SessionsController#login_attempt as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"u3zGTP3HkJM9ap1Y3lSQWTrbxtFw71ODnFCVvzvUD9rU9tHjgCAtP8ZHpZahDsQl0RTefiTQLiYHxJGccxGbjg==", "username"=>"bob", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "bob"], ["LIMIT", 1]]
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 80ms (Views: 13.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sessions/login" for 127.0.0.1 at 2017-08-22 18:22:59 -0400
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"login_attempt", :controller=>"sessions"}):
+    1: <% @page_title = "UserAuth | Login" -%>
+    2: <div class= "Sign_Form">
+    3:   <h1>Log in</h1>
+    4:   <%= form_tag(:action => 'login_attempt') do %>
+    5:     <p>Username or Email:</br> <%= text_field_tag(:username_or_email) %></p>
+    6:     <p>Password:</br> <%= password_field_tag :login_password %></p>
+    7:     <%= submit_tag("Log In") %>
+  
+app/views/sessions/login.html.erb:4:in `_app_views_sessions_login_html_erb__2755902734623656864_70141051297160'
+Started POST "/sessions/login" for 127.0.0.1 at 2017-08-22 18:23:05 -0400
+  
+AbstractController::ActionNotFound (The action 'pieces' could not be found for SessionsController):
+  
+actionpack (5.1.2) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.2) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.2) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:832:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.2) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/pieces/index" for 127.0.0.1 at 2017-08-22 18:23:47 -0400
+Processing by PiecesController#show as HTML
+  Parameters: {"id"=>"index"}
+  [1m[36mPiece Load (0.2ms)[0m  [1m[34mSELECT  "pieces".* FROM "pieces" WHERE "pieces"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 14ms (ActiveRecord: 5.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Piece with 'id'=index):
+  
+app/controllers/pieces_controller.rb:72:in `set_piece'
+Started GET "/pieces/" for 127.0.0.1 at 2017-08-22 18:23:53 -0400
+Processing by PiecesController#index as HTML
+  Rendering pieces/index.html.erb within layouts/application
+  [1m[36mPiece Load (0.3ms)[0m  [1m[34mSELECT "pieces".* FROM "pieces"[0m
+  Rendered pieces/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 37ms (Views: 34.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pieces/" for 127.0.0.1 at 2017-08-22 18:24:26 -0400
+  
+ArgumentError (Missing :controller key on routes definition, please check your routes.):
+  
+config/routes.rb:15:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+Started GET "/pieces/" for 127.0.0.1 at 2017-08-22 18:25:05 -0400
+  
+ArgumentError (Missing :controller key on routes definition, please check your routes.):
+  
+config/routes.rb:15:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+Started GET "/" for 127.0.0.1 at 2017-08-22 18:25:12 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 23ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pieces" for 127.0.0.1 at 2017-08-22 18:26:34 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/pieces"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-08-22 18:26:40 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 29ms (Views: 27.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions/login" for 127.0.0.1 at 2017-08-22 18:38:24 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/sessions/login"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'

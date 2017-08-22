@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get '/', to: 'sessions#new'
+
   get 'user/new'
 
   get 'sessions/login'
@@ -9,7 +11,12 @@ Rails.application.routes.draw do
 
   get 'sessions/setting'
 
-  get  '/signup',  to: 'user#new'
+  get  '/signup',  to: 'users#new'
+  get  '/pieces', to: 'sessions/pieces'
+
+  post '/sessions/login', to: 'sessions#pieces'
+
+  resources :users
 
 
   resources :comments
