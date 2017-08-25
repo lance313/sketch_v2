@@ -3,7 +3,9 @@ Rails.application.routes.draw do
 
   get 'user/new'
 
-  get 'sessions/login'
+  # get 'sessions/login'
+
+  get 'sessions/pieces'
 
   get 'sessions/home'
 
@@ -11,10 +13,13 @@ Rails.application.routes.draw do
 
   get 'sessions/setting'
 
-  get  '/signup',  to: 'users#new'
-  get  '/pieces', to: 'sessions/pieces'
+  get 'logout', to: 'sessions#destroy'
 
-  post '/sessions/login', to: 'sessions#pieces'
+  get  '/signup',  to: 'users#new'
+  get  '/pieces', to: 'pieces#index'
+
+  post '/sessions/login', to: 'sessions#login_attempt'
+  # to: 'pieces#index'
 
   resources :users
 

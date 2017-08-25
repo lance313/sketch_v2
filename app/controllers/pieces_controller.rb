@@ -1,5 +1,6 @@
 class PiecesController < ApplicationController
   before_action :set_piece, only: [:show, :edit, :update, :destroy]
+  before_action :authorize, only: [:index]
   # before_action :authenticate_with_http_basic, only: :new
   #
   # authenticate_with_http_basic do |name, password|
