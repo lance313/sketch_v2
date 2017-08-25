@@ -10,6 +10,10 @@
   <p>
   <%= submit_tag 'Log in' %>
   </p>
+  <p>
+    <!-- <%= link_to "signup", signup_path %> -->
+  <a href="/signup">Sign up</a>
+  </p>
   <% end %>
 
 </div>
@@ -21,6 +25,16 @@
     background-size:cover;
     text-align: center;
     color: #4a1cdf;
+  }
+  a {
+
+    color: #4a1cdf;
+    text-decoration: underline;
+    
+
+  }
+  a:hover{
+    color: #c5b3f0;
 
   }
 </style>
