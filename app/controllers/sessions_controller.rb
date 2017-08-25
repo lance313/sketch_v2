@@ -3,15 +3,15 @@ class SessionsController < ApplicationController
   #   #Login Form
   # end
   def login_attempt
-    authorized_user = User.find_by(name: params[:username]).authenticate(params[:password])
-    if authorized_user
-      flash[:notice] = "Welcome Back!, #{authorized_user.name}"
-      session[:user_id] = authorized_user.id
+    # authorized_user = User.find_by(name: params[:username]).authenticate(params[:password])
+    if  User.find_by(name: params[:username]) && User.find_by(name: params[:username]).authenticate(params[:password])
+      flash[:notice] = "Welcome Back!, #{User.find_by(name: params[:username]).name}"
+      session[:user_id] = User.find_by(name: params[:username]).id
       redirect_to('/pieces')
     else
       flash[:notice] = "Invalid Username or Password"
       flash[:color]= "invalid"
-      render "login"
+      redirect_to "/"
     end
   end
 #   def login_attempt

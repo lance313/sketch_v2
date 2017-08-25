@@ -30,7 +30,6 @@ Rails.application.routes.draw do
     resources :comments
   end
 
-  root 'pieces#index'
 
   get '/comments' => 'pieces#index'
 
